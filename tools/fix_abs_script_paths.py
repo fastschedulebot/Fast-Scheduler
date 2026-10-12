@@ -14,7 +14,7 @@ https://fastschedulebot.github.io and "/scripts/lang.js" requests
 
 while the file actually lives at
 
-    https://fastschedulebot.github.io/Fast-Schedule/scripts/lang.js -> 200
+    https://fastschedulebot.github.io/Fast-Scheduler/scripts/lang.js -> 200
 
 Every other asset on those pages (theme.js, settings.js, help-search.js,
 hotkeys.js, ...) already used a correct relative path, which is why the pages

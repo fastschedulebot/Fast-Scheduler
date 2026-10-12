@@ -1639,7 +1639,14 @@ nav.hc-pager > span.hc-card.next.none > span {
 .brand-mark { width: 38px !important; height: 38px !important; }
 .brand-mark img { width: 38px !important; height: 38px !important; }
 @media (max-width: 560px) { .brand-mark img { width: 32px !important; height: 32px !important; } }
-.brand-dock .brand .logo-dot { width: 36px !important; height: 36px !important; }
+.brand-dock .brand .logo-dot { width: 40px !important; height: 40px !important; }
+.home-nav .brand .logo-dot, .home-nav .brand .logo-dot img { width: 44px !important; height: 44px !important; }
+.home-nav .brand .logo-dot img { object-fit: contain; display: block; }
+.home-nav .brand-full { font-size: 1.12rem !important; }
+@media (max-width: 560px) {
+  .home-nav .brand .logo-dot, .home-nav .brand .logo-dot img { width: 38px !important; height: 38px !important; }
+  .home-nav .brand-full { font-size: 1rem !important; }
+}
 
 /* 4. RU navbar: with the short "Открыть" CTA plus room to shrink, the
    pills must never overlap or clip. Earlier collapse (1350px), tighter

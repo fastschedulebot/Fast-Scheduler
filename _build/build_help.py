@@ -2455,26 +2455,26 @@ def build_page(nodes, help_sec):
   <title>Help Center — Fast Scheduler for Telegram</title>
   <meta name="description" content="Searchable help center for Fast Scheduler: scheduling, recurring posts, sender bots, channels, statistics, premium and payments. {len(article_order)} answers, instantly searchable.">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://fastschedulebot.github.io/Fast-Schedule/help.html">
+  <link rel="canonical" href="https://fastschedulebot.github.io/Fast-Scheduler/help.html">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Help Center — Fast Scheduler for Telegram">
   <meta property="og:description" content="{len(article_order)} searchable help topics for the Fast Scheduler Telegram bot.">
-  <meta property="og:url" content="https://fastschedulebot.github.io/Fast-Schedule/help.html">
-  <meta property="og:image" content="https://fastschedulebot.github.io/Fast-Schedule/og-cover-v2.png">
+  <meta property="og:url" content="https://fastschedulebot.github.io/Fast-Scheduler/help.html">
+  <meta property="og:image" content="https://fastschedulebot.github.io/Fast-Scheduler/og-cover-v2.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Help Center — Fast Scheduler for Telegram">
   <meta name="twitter:description" content="{len(article_order)} searchable help topics for the Fast Scheduler Telegram bot.">
-  <meta name="twitter:image" content="https://fastschedulebot.github.io/Fast-Schedule/og-cover-v2.png">
+  <meta name="twitter:image" content="https://fastschedulebot.github.io/Fast-Scheduler/og-cover-v2.png">
   {FAVICON}
   <script type="application/ld+json">
   {{
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-      {{"@type": "ListItem", "position": 1, "name": "Fast Scheduler", "item": "https://fastschedulebot.github.io/Fast-Schedule/"}},
-      {{"@type": "ListItem", "position": 2, "name": "Help Center", "item": "https://fastschedulebot.github.io/Fast-Schedule/help.html"}}
+      {{"@type": "ListItem", "position": 1, "name": "Fast Scheduler", "item": "https://fastschedulebot.github.io/Fast-Scheduler/"}},
+      {{"@type": "ListItem", "position": 2, "name": "Help Center", "item": "https://fastschedulebot.github.io/Fast-Scheduler/help.html"}}
     ]
   }}
   </script>

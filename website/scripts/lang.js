@@ -188,7 +188,7 @@
     try {
       var p = location.pathname;
       if (lang === 'ru' && sectionKind(p)) return '';
-      var base = '/Fast-Schedule/';
+      var base = '/Fast-Scheduler/';
       var isArchive = p.indexOf(base + 'legal/history/') === 0;
       var isRuArchive = p.indexOf(base + 'ru/legal/history/') === 0;
       var isStatic = !isArchive && !isRuArchive && (p === base || p === base + 'index.html' ||

@@ -20,7 +20,7 @@ or, when the site lives in a subdirectory, from the site root:
     https://<host>/<path>/<key>.txt
 
 This site is served from a REPOSITORY SUBNAME
-(https://fastschedulebot.github.io/Fast-Schedule/), so the key file has to
+(https://fastschedulebot.github.io/Fast-Scheduler/), so the key file has to
 sit at the root of THAT deploy tree - repo root and website/ - not at the
 repository root and not inside the page directory. It is published through
 the PUB allowlist in sync_root.py / sync_audit.py for exactly that reason.
@@ -53,7 +53,7 @@ import urllib.request
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-SITE = 'https://fastschedulebot.github.io/Fast-Schedule/'
+SITE = 'https://fastschedulebot.github.io/Fast-Scheduler/'
 KEY = '5817133906fc4ab78b0f19ca52bf8f58'
 KEY_FILE = KEY + '.txt'
 API = 'https://api.indexnow.org/indexnow'

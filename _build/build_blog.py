@@ -48,7 +48,7 @@ for _art in ARTICLES:
     if _x:
         _art['content'] = _art['content'] + _x
 
-SITE = 'https://fastschedulebot.github.io/Fast-Schedule'
+SITE = 'https://fastschedulebot.github.io/Fast-Scheduler'
 OUT = os.path.dirname(HERE)   # .../website
 BLOG_DIR = os.path.join(OUT, 'blog')
 BLOG_A_DIR = os.path.join(BLOG_DIR, 'a')

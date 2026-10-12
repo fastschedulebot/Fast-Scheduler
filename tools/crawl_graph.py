@@ -37,8 +37,8 @@ def resolve(base, href):
     if not href:
         return None
     if href.startswith(('http://', 'https://', '//', 'mailto:', 'tel:', 'javascript:')):
-        if 'fastschedulebot.github.io/Fast-Schedule' in href:
-            href = href.split('/Fast-Schedule', 1)[1]
+        if 'fastschedulebot.github.io/Fast-Scheduler' in href:
+            href = href.split('/Fast-Scheduler', 1)[1]
         else:
             return None
     if href.startswith('#'):

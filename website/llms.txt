@@ -2,114 +2,114 @@
 
 > Telegram bot that schedules and auto-publishes posts to Telegram channels — batch scheduling, recurring messages, sender bots, statistics, backups and team permissions.
 
-- Official site: https://fastschedulebot.github.io/Fast-Schedule
+- Official site: https://fastschedulebot.github.io/Fast-Scheduler
 - Bot: https://t.me/FastSchedulerBot
 - Support / feedback bot (a human reads every ticket): https://t.me/FastSchedulerSupport_bot
-- Help Center (interactive search): https://fastschedulebot.github.io/Fast-Schedule/help.html
-- Blog (Telegram channel growth guides): https://fastschedulebot.github.io/Fast-Schedule/blog/ (75 articles)
-- Full help corpus for AI retrieval: https://fastschedulebot.github.io/Fast-Schedule/llms-full.txt (308 articles)
+- Help Center (interactive search): https://fastschedulebot.github.io/Fast-Scheduler/help.html
+- Blog (Telegram channel growth guides): https://fastschedulebot.github.io/Fast-Scheduler/blog/ (75 articles)
+- Full help corpus for AI retrieval: https://fastschedulebot.github.io/Fast-Scheduler/llms-full.txt (308 articles)
 - Pricing: Free plan (1 channel, 100 pending scheduled messages, 100 sends/channel/month, 1 recurring message); Premium $6.83/month or $68.03/year (3 channels, unlimited sends, unlimited recurring, 100MB media, leaderboards, backups).
-- Privacy Policy: https://fastschedulebot.github.io/Fast-Schedule/legal/privacy.html
-- Terms: https://fastschedulebot.github.io/Fast-Schedule/legal/terms.html
-- Refund Policy: https://fastschedulebot.github.io/Fast-Schedule/legal/refundpolicy.html
+- Privacy Policy: https://fastschedulebot.github.io/Fast-Scheduler/legal/privacy.html
+- Terms: https://fastschedulebot.github.io/Fast-Scheduler/legal/terms.html
+- Refund Policy: https://fastschedulebot.github.io/Fast-Scheduler/legal/refundpolicy.html
 
 ## Help topics
 
-- [Getting Started](https://fastschedulebot.github.io/Fast-Schedule/help/c/start.html): 21 guides
-- [Scheduling Messages](https://fastschedulebot.github.io/Fast-Schedule/help/c/scheduling.html): 19 guides
-- [Channels](https://fastschedulebot.github.io/Fast-Schedule/help/c/channels.html): 13 guides
-- [Sender Bots](https://fastschedulebot.github.io/Fast-Schedule/help/c/bots.html): 13 guides
-- [Admins](https://fastschedulebot.github.io/Fast-Schedule/help/c/admins.html): 4 guides
-- [Premium](https://fastschedulebot.github.io/Fast-Schedule/help/c/premium.html): 33 guides
-- [Referrals](https://fastschedulebot.github.io/Fast-Schedule/help/c/referral.html): 14 guides
-- [Limits](https://fastschedulebot.github.io/Fast-Schedule/help/c/limits.html): 16 guides
-- [Time Zone](https://fastschedulebot.github.io/Fast-Schedule/help/c/timezone.html): 5 guides
-- [Language](https://fastschedulebot.github.io/Fast-Schedule/help/c/language.html): 4 guides
-- [Export](https://fastschedulebot.github.io/Fast-Schedule/help/c/export.html): 9 guides
-- [Import](https://fastschedulebot.github.io/Fast-Schedule/help/c/import.html): 7 guides
-- [Backup](https://fastschedulebot.github.io/Fast-Schedule/help/c/backup.html): 13 guides
-- [Media Storage](https://fastschedulebot.github.io/Fast-Schedule/help/c/media_storage.html): 17 guides
-- [Tools](https://fastschedulebot.github.io/Fast-Schedule/help/c/tools.html): 9 guides
-- [Pro Tips](https://fastschedulebot.github.io/Fast-Schedule/help/c/tips.html): 20 guides
-- [Feedback & Support](https://fastschedulebot.github.io/Fast-Schedule/help/c/feedback.html): 11 guides
-- [Frequently Asked Questions](https://fastschedulebot.github.io/Fast-Schedule/help/c/faq.html): 19 guides
-- [Text Commands](https://fastschedulebot.github.io/Fast-Schedule/help/c/commands.html): 8 guides
-- [Troubleshooting](https://fastschedulebot.github.io/Fast-Schedule/help/c/errors.html): 15 guides
-- [Privacy](https://fastschedulebot.github.io/Fast-Schedule/help/c/privacy.html): 10 guides
-- [Contact & Support](https://fastschedulebot.github.io/Fast-Schedule/help/c/contact.html): 7 guides
-- [Settings & Configuration](https://fastschedulebot.github.io/Fast-Schedule/help/c/config.html): 3 guides
-- [More topics](https://fastschedulebot.github.io/Fast-Schedule/help/c/misc.html): 9 guides
+- [Getting Started](https://fastschedulebot.github.io/Fast-Scheduler/help/c/start.html): 21 guides
+- [Scheduling Messages](https://fastschedulebot.github.io/Fast-Scheduler/help/c/scheduling.html): 19 guides
+- [Channels](https://fastschedulebot.github.io/Fast-Scheduler/help/c/channels.html): 13 guides
+- [Sender Bots](https://fastschedulebot.github.io/Fast-Scheduler/help/c/bots.html): 13 guides
+- [Admins](https://fastschedulebot.github.io/Fast-Scheduler/help/c/admins.html): 4 guides
+- [Premium](https://fastschedulebot.github.io/Fast-Scheduler/help/c/premium.html): 33 guides
+- [Referrals](https://fastschedulebot.github.io/Fast-Scheduler/help/c/referral.html): 14 guides
+- [Limits](https://fastschedulebot.github.io/Fast-Scheduler/help/c/limits.html): 16 guides
+- [Time Zone](https://fastschedulebot.github.io/Fast-Scheduler/help/c/timezone.html): 5 guides
+- [Language](https://fastschedulebot.github.io/Fast-Scheduler/help/c/language.html): 4 guides
+- [Export](https://fastschedulebot.github.io/Fast-Scheduler/help/c/export.html): 9 guides
+- [Import](https://fastschedulebot.github.io/Fast-Scheduler/help/c/import.html): 7 guides
+- [Backup](https://fastschedulebot.github.io/Fast-Scheduler/help/c/backup.html): 13 guides
+- [Media Storage](https://fastschedulebot.github.io/Fast-Scheduler/help/c/media_storage.html): 17 guides
+- [Tools](https://fastschedulebot.github.io/Fast-Scheduler/help/c/tools.html): 9 guides
+- [Pro Tips](https://fastschedulebot.github.io/Fast-Scheduler/help/c/tips.html): 20 guides
+- [Feedback & Support](https://fastschedulebot.github.io/Fast-Scheduler/help/c/feedback.html): 11 guides
+- [Frequently Asked Questions](https://fastschedulebot.github.io/Fast-Scheduler/help/c/faq.html): 19 guides
+- [Text Commands](https://fastschedulebot.github.io/Fast-Scheduler/help/c/commands.html): 8 guides
+- [Troubleshooting](https://fastschedulebot.github.io/Fast-Scheduler/help/c/errors.html): 15 guides
+- [Privacy](https://fastschedulebot.github.io/Fast-Scheduler/help/c/privacy.html): 10 guides
+- [Contact & Support](https://fastschedulebot.github.io/Fast-Scheduler/help/c/contact.html): 7 guides
+- [Settings & Configuration](https://fastschedulebot.github.io/Fast-Scheduler/help/c/config.html): 3 guides
+- [More topics](https://fastschedulebot.github.io/Fast-Scheduler/help/c/misc.html): 9 guides
 
 ## Key answers
 
 ### Getting Started
-New here? This section takes you from an empty chat to a published post: connect your channel, connect a sender bot, schedule the first message - then Full guide: https://fastschedulebot.github.io/Fast-Schedule/help/a/start.html
+New here? This section takes you from an empty chat to a published post: connect your channel, connect a sender bot, schedule the first message - then Full guide: https://fastschedulebot.github.io/Fast-Scheduler/help/a/start.html
 
 ### Getting Started
-Three steps and your first post is scheduled. The whole setup usually takes five minutes. Full guide: https://fastschedulebot.github.io/Fast-Schedule/help/a/getting_started.html
+Three steps and your first post is scheduled. The whole setup usually takes five minutes. Full guide: https://fastschedulebot.github.io/Fast-Scheduler/help/a/getting_started.html
 
 ### Connecting a Channel
-Before you can schedule messages, you need to connect a Telegram channel. Full guide: https://fastschedulebot.github.io/Fast-Schedule/help/a/connect_channel.html
+Before you can schedule messages, you need to connect a Telegram channel. Full guide: https://fastschedulebot.github.io/Fast-Scheduler/help/a/connect_channel.html
 
 ### Connecting a Bot
-Every channel needs its own sender bot - a Telegram bot you own that posts messages to your channel under the bot's name. Why Connect Your Own Bot? Full guide: https://fastschedulebot.github.io/Fast-Schedule/help/a/connect_bot.html
+Every channel needs its own sender bot - a Telegram bot you own that posts messages to your channel under the bot's name. Why Connect Your Own Bot? Full guide: https://fastschedulebot.github.io/Fast-Scheduler/help/a/connect_bot.html
 
 ### Step 1: Link
-Connect your Telegram channel to Fast Scheduler: 1. Add @FastSchedulerBot as an administrator to your channel. 2. Full guide: https://fastschedulebot.github.io/Fast-Schedule/help/a/onboarding_step1.html
+Connect your Telegram channel to Fast Scheduler: 1. Add @FastSchedulerBot as an administrator to your channel. 2. Full guide: https://fastschedulebot.github.io/Fast-Scheduler/help/a/onboarding_step1.html
 
 ### Step 2: Schedule
-Create your first scheduled message: 1. Tap Schedule Message in the main menu. 2. Full guide: https://fastschedulebot.github.io/Fast-Schedule/help/a/onboarding_step2.html
+Create your first scheduled message: 1. Tap Schedule Message in the main menu. 2. Full guide: https://fastschedulebot.github.io/Fast-Scheduler/help/a/onboarding_step2.html
 
 ### Your Account
-Your account is created automatically the first time you open the bot - nothing to sign up for. Full guide: https://fastschedulebot.github.io/Fast-Schedule/help/a/start_account.html
+Your account is created automatically the first time you open the bot - nothing to sign up for. Full guide: https://fastschedulebot.github.io/Fast-Scheduler/help/a/start_account.html
 
 ### Send Your First Post
-1. Add @FastSchedulerBot to your channel as an Administrator (Post Messages permission is enough). 2. Full guide: https://fastschedulebot.github.io/Fast-Schedule/help/a/start_schedule.html
+1. Add @FastSchedulerBot to your channel as an Administrator (Post Messages permission is enough). 2. Full guide: https://fastschedulebot.github.io/Fast-Scheduler/help/a/start_schedule.html
 
 ### Quick Tips
-• Use HH:MM alone to schedule for today at that time. • Upload a .txt file during scheduling to create many messages at once (blank line = new message). Full guide: https://fastschedulebot.github.io/Fast-Schedule/help/a/start_tips.html
+• Use HH:MM alone to schedule for today at that time. • Upload a .txt file during scheduling to create many messages at once (blank line = new message). Full guide: https://fastschedulebot.github.io/Fast-Scheduler/help/a/start_tips.html
 
 ### Glossary
-Six terms cover most of the bot: • Channel - the Telegram channel your posts go to. The bot must be its admin. Full guide: https://fastschedulebot.github.io/Fast-Schedule/help/a/glossary.html
+Six terms cover most of the bot: • Channel - the Telegram channel your posts go to. The bot must be its admin. Full guide: https://fastschedulebot.github.io/Fast-Scheduler/help/a/glossary.html
 
 ### Channel
-A Telegram channel is where your audience sees your posts. Fast Scheduler connects to your channel, then posts your scheduled and recurring messages to it. Full guide: https://fastschedulebot.github.io/Fast-Schedule/help/a/glossary_channel.html
+A Telegram channel is where your audience sees your posts. Fast Scheduler connects to your channel, then posts your scheduled and recurring messages to it. Full guide: https://fastschedulebot.github.io/Fast-Scheduler/help/a/glossary_channel.html
 
 ### Sender Bot
-A sender bot is a Telegram bot you create via @BotFather. Fast Scheduler uses it to post messages so they appear from your bot's name. Full guide: https://fastschedulebot.github.io/Fast-Schedule/help/a/glossary_sender.html
+A sender bot is a Telegram bot you create via @BotFather. Fast Scheduler uses it to post messages so they appear from your bot's name. Full guide: https://fastschedulebot.github.io/Fast-Scheduler/help/a/glossary_sender.html
 
 ### Signature
-A signature is custom text that is automatically added to every message sent to your channel - for example "Posted by @yourbot" or your website link. Full guide: https://fastschedulebot.github.io/Fast-Schedule/help/a/glossary_signature.html
+A signature is custom text that is automatically added to every message sent to your channel - for example "Posted by @yourbot" or your website link. Full guide: https://fastschedulebot.github.io/Fast-Scheduler/help/a/glossary_signature.html
 
 ### Recurring
-A recurring message repeats automatically on a schedule - every day, on specific weekdays, or on a monthly date. Full guide: https://fastschedulebot.github.io/Fast-Schedule/help/a/glossary_recurring.html
+A recurring message repeats automatically on a schedule - every day, on specific weekdays, or on a monthly date. Full guide: https://fastschedulebot.github.io/Fast-Scheduler/help/a/glossary_recurring.html
 
 ### Premium
-Premium is a paid subscription that raises or removes the free plan limits: • More channels and sender bots (3/3). Full guide: https://fastschedulebot.github.io/Fast-Schedule/help/a/glossary_premium.html
+Premium is a paid subscription that raises or removes the free plan limits: • More channels and sender bots (3/3). Full guide: https://fastschedulebot.github.io/Fast-Scheduler/help/a/glossary_premium.html
 
 ### Import
-Import brings data back into the bot from a file: a .fsback backup, a .txt list of messages, a .csv spreadsheet, or a schedule created in SetDate. Full guide: https://fastschedulebot.github.io/Fast-Schedule/help/a/glossary_import.html
+Import brings data back into the bot from a file: a .fsback backup, a .txt list of messages, a .csv spreadsheet, or a schedule created in SetDate. Full guide: https://fastschedulebot.github.io/Fast-Scheduler/help/a/glossary_import.html
 
 ### Export
-Export saves your data to a file you can download and keep. You can export scheduled and recurring messages, or run a full backup (.fsback) that restores Full guide: https://fastschedulebot.github.io/Fast-Schedule/help/a/glossary_export.html
+Export saves your data to a file you can download and keep. You can export scheduled and recurring messages, or run a full backup (.fsback) that restores Full guide: https://fastschedulebot.github.io/Fast-Scheduler/help/a/glossary_export.html
 
 ### Media Storage
-Media storage lets you save photos, videos, and documents once, then reuse them in any scheduled message via From Storage . Full guide: https://fastschedulebot.github.io/Fast-Schedule/help/a/glossary_storage.html
+Media storage lets you save photos, videos, and documents once, then reuse them in any scheduled message via From Storage . Full guide: https://fastschedulebot.github.io/Fast-Scheduler/help/a/glossary_storage.html
 
 ### Feedback
-Feedback is how you report issues, request features, or get in touch with support. Full guide: https://fastschedulebot.github.io/Fast-Schedule/help/a/glossary_feedback.html
+Feedback is how you report issues, request features, or get in touch with support. Full guide: https://fastschedulebot.github.io/Fast-Scheduler/help/a/glossary_feedback.html
 
 ### SetDate Integration
-Need to schedule many posts at once? The SetDate Bot lets you bulk-create schedules in minutes. What is SetDate? Full guide: https://fastschedulebot.github.io/Fast-Schedule/help/a/setdate.html
+Need to schedule many posts at once? The SetDate Bot lets you bulk-create schedules in minutes. What is SetDate? Full guide: https://fastschedulebot.github.io/Fast-Scheduler/help/a/setdate.html
 
 ### Advertising & Promotion
-To advertise to Fast Scheduler users, contact @MaximalXP to discuss placements and packages. Full guide: https://fastschedulebot.github.io/Fast-Schedule/help/a/advertising.html
+To advertise to Fast Scheduler users, contact @MaximalXP to discuss placements and packages. Full guide: https://fastschedulebot.github.io/Fast-Scheduler/help/a/advertising.html
 
 ### Scheduling Messages
-Everything about one-time scheduling: the basic flow, every content type the bot can post, and the tools to manage what you have queued. The basic flow 1. Full guide: https://fastschedulebot.github.io/Fast-Schedule/help/a/scheduling.html
+Everything about one-time scheduling: the basic flow, every content type the bot can post, and the tools to manage what you have queued. The basic flow 1. Full guide: https://fastschedulebot.github.io/Fast-Scheduler/help/a/scheduling.html
 
 ### Photo & Video Posts
-Attach photos, videos, GIFs, or documents to any scheduled message. During scheduling, after sending the text, choose how to attach media: • Normal - one Full guide: https://fastschedulebot.github.io/Fast-Schedule/help/a/schedule_media.html
+Attach photos, videos, GIFs, or documents to any scheduled message. During scheduling, after sending the text, choose how to attach media: • Normal - one Full guide: https://fastschedulebot.github.io/Fast-Scheduler/help/a/schedule_media.html
 
 ### Polls
-Schedule polls and quizzes for your channel. How to do it: 1. Create the poll/quiz in any Telegram chat first. 2. Full guide: https://fastschedulebot.github.io/Fast-Schedule/help/a/schedule_poll.html
+Schedule polls and quizzes for your channel. How to do it: 1. Create the poll/quiz in any Telegram chat first. 2. Full guide: https://fastschedulebot.github.io/Fast-Scheduler/help/a/schedule_poll.html

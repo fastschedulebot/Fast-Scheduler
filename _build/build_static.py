@@ -40,7 +40,7 @@ try:
 except OSError:  # pragma: no cover - build must not die over styling
     HC_COMPONENT_CSS = ''
 
-SITE = 'https://fastschedulebot.github.io/Fast-Schedule'
+SITE = 'https://fastschedulebot.github.io/Fast-Scheduler'
 OUT = os.path.dirname(HERE)   # .../website
 import datetime as _dt
 BUILD_DATE = _dt.date.today().isoformat()

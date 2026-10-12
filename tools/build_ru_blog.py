@@ -27,7 +27,7 @@ from build_ru_pages import load_map, transform, set_head  # noqa: E402
 from build_ru_pages2 import inject_alts  # noqa: E402
 
 SITE = os.path.join(ROOT, 'website')
-BASE = 'https://fastschedulebot.github.io/Fast-Schedule'
+BASE = 'https://fastschedulebot.github.io/Fast-Scheduler'
 SRC = os.path.join(SITE, 'blog')
 DST = os.path.join(SITE, 'ru', 'blog')
 
@@ -69,8 +69,8 @@ def _ru_head_article(html, slug):
 
 def _rewrite_urls(html):
     # Canonical / OG absolute URLs point at the EN tree; mirror them to /ru/.
-    html = html.replace('Fast-Schedule/blog/', 'Fast-Schedule/ru/blog/')
-    html = html.replace('Fast-Schedule/ru/ru/blog/', 'Fast-Schedule/ru/blog/')
+    html = html.replace('Fast-Scheduler/blog/', 'Fast-Scheduler/ru/blog/')
+    html = html.replace('Fast-Scheduler/ru/ru/blog/', 'Fast-Scheduler/ru/blog/')
     return html
 
 

@@ -10,7 +10,7 @@ site reads as one product:
     label (main.css zeroes the long text below 860px).
 
 Paths are RELATIVE on purpose. The site is published under
-/Fast-Schedule/, so a leading "/" would resolve against the domain root and
+/Fast-Scheduler/, so a leading "/" would resolve against the domain root and
 404. The prefix is computed from each file's depth under website/, and
 favicon-32.png / brand-logo.png therefore resolve correctly from blog/a/,
 ru/help/a/ and every other depth.

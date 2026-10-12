@@ -22,7 +22,7 @@ import build_help as bh  # noqa: E402
 import build_static as bs  # noqa: E402
 import importlib.util as _ilu
 
-BASE = 'https://fastschedulebot.github.io/Fast-Schedule'
+BASE = 'https://fastschedulebot.github.io/Fast-Scheduler'
 BS_CHR = chr(92)
 NL = chr(10)
 

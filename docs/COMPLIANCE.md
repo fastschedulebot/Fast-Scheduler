@@ -1,7 +1,7 @@
 # Site compliance audit
 
 Audited 5 October 2026. Covers the static site served from
-`https://fastschedulebot.github.io/Fast-Schedule/`. This is the deployed site
+`https://fastschedulebot.github.io/Fast-Scheduler/`. This is the deployed site
 only; the Telegram bot has its own data flows, covered by the Privacy Policy.
 
 ## Third-party resource loading: none
