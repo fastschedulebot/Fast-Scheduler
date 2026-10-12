@@ -207,18 +207,42 @@
     return '';
   }
 
+  /* Keep <link rel=canonical> / og:url in sync with the visible URL after
+     an instant language switch (history API changes the address bar
+     without reloading, so the tags would otherwise point at the old one.
+     Crawlers fetch the static URLs directly, this is only for correctness
+     of the live document: copy/share actions read these tags. */
+  function syncCanonical(path) {
+    try {
+      var abs = location.origin + path;
+      var c = document.querySelector('link[rel="canonical"]');
+      if (c) c.setAttribute('href', abs);
+      var og = document.querySelector('meta[property="og:url"]');
+      if (og) og.setAttribute('content', abs);
+    } catch (e) {}
+  }
   function set(lang) {
     lang = lang === 'ru' ? 'ru' : 'en';
     try { localStorage.setItem('fs-lang', lang); } catch (e) {}
-    var paired = staticLanguageCounterpart(lang);
-    if (paired && paired !== location.pathname) {
-      /* Preserve search/hash anchors while loading the complete paired page. */
-      location.replace(paired + (location.search || '') + (location.hash || ''));
-      return;
-    }
+    /* Instant switch: translate this document in place (chrome is
+       synchronous; the article-body dictionary streams in a moment later
+       on first use) and move the address bar with the history API — no
+       reload. The /ru/ static copies remain for SEO/direct links; a
+       refresh lands on the equivalent server-rendered page. */
     document.documentElement.setAttribute('lang', lang);
     apply(lang);
     try { window.dispatchEvent(new CustomEvent('fs-lang-change', { detail: { lang: lang } })); } catch (e) {}
+    var paired = staticLanguageCounterpart(lang);
+    if (paired && paired !== location.pathname) {
+      var next = paired + (location.search || '') + (location.hash || '');
+      try {
+        history.replaceState({ 'fs-lang': lang }, '', next);
+        syncCanonical(paired);
+      } catch (e) {
+        /* Very old browsers without the history API: classic navigation. */
+        location.replace(next);
+      }
+    }
   }
   function t(key) { return (STR[get()] || STR.en)[key] || STR.en[key] || key; }
 
@@ -741,6 +765,19 @@
     else menu.insertBefore(wrap, menu.firstChild);
     wrap.querySelectorAll('button').forEach(function (b) {
       b.addEventListener('click', function (e) { e.stopPropagation(); set(b.getAttribute('data-lang')); });
+      /* Warm the 410KB article-body dictionary on hover/focus of the RU
+         button, so the first real switch translates bodies instantly too.
+         EN users who never touch it download nothing. */
+      if (b.getAttribute('data-lang') === 'ru') {
+        var warmed = false;
+        var warm = function () {
+          if (warmed) return;
+          warmed = true;
+          try { ensureContent(function () {}); } catch (e) {}
+        };
+        b.addEventListener('pointerenter', warm);
+        b.addEventListener('focus', warm);
+      }
     });
   }
   window.FS_LANG = { get: get, set: set, t: t, apply: apply, RU_MAP: RU_MAP, I18N: I18N };
