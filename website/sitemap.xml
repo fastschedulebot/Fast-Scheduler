@@ -14,7 +14,7 @@
   </url>
   <url>
     <loc>https://fastschedulebot.github.io/Fast-Scheduler/blog/</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -439,6 +439,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://fastschedulebot.github.io/Fast-Scheduler/blog/a/news-batch-scheduling-guide.html</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://fastschedulebot.github.io/Fast-Scheduler/blog/a/news-storage-premium-launch.html</loc>
     <lastmod>2026-10-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -463,8 +469,14 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fastschedulebot.github.io/Fast-Scheduler/blog/a/news-batch-scheduling-guide.html</loc>
-    <lastmod>2026-09-27</lastmod>
+    <loc>https://fastschedulebot.github.io/Fast-Scheduler/blog/a/news-protected-backup-auto.html</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fastschedulebot.github.io/Fast-Scheduler/blog/a/news-admin-export-password.html</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>

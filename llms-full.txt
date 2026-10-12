@@ -1,6 +1,6 @@
 # Fast Scheduler — complete help center corpus
 
-Exported 2026-10-09. 308 articles. Canonical pages: https://fastschedulebot.github.io/Fast-Scheduler/help/a/<article-id>.html
+Exported 2026-10-12. 308 articles. Canonical pages: https://fastschedulebot.github.io/Fast-Scheduler/help/a/<article-id>.html
 
 # Getting Started
 
@@ -1141,7 +1141,7 @@ Q: Can I import messages in bulk?
 A: Yes! Send a .txt file where each message is separated by a blank line. All messages will be imported with the same date/time. You can then edit each one individually.
 
 Q: What formats are supported for import?
-A: Supported formats: .txt, .csv, .json, .rtf, .odt, .fsback (full backup), .fspback (password-protected backup).
+A: Supported formats: .txt, .csv, .json, .rtf, .odt, .fsback (Fast Scheduler Backup), .fspback (Fast Scheduler Protected Backup).
 
 ## Importing Your Data
 URL: https://fastschedulebot.github.io/Fast-Scheduler/help/a/import_data.html
@@ -1251,7 +1251,7 @@ The backup file is sent to you as a document in the chat. Save it somewhere safe
 ## What Is the Difference Between .fsback and .fspback?
 URL: https://fastschedulebot.github.io/Fast-Scheduler/help/a/qa_fsback_vs_fspback.html
 
-Short answer: both are the same complete backup — the only difference is the password . A .fspback file is a Fast Scheduler Protected Backup — a password-protected .fsback file. The extra “p” stands for protected . What each format is .fsback — a Fast Scheduler Backup: a full backup of your Fast Scheduler data with no password . Anyone who gets the file can restore it, so treat it like a plain-text secret. .fspback — a Fast Scheduler Protected Backup: the same backup, encrypted . Restoring asks for the password you set when creating it. Without the password the data inside cannot be read. When you tap Create Backup (or send /backup ), the bot asks whether you want password protection. Choosing no password produces .fsback ; setting a password (and an optional hint) produces .fspback . A Premium feature — backups are part of the Export &amp; Backup toolkit that unlocks with Premium. What is inside either file Both formats package your selected data — scheduled messages, recurring messages, settings, and more — into one archive you can download, store in the cloud, or move to another account. Media you saved in Media Storage is referenced, not re-uploaded, so files stay small. Which one should you pick? Restoring to your own account right now? .fsback is fine and faster to use. Keeping the file long-term, sending it to a teammate, or migrating to a new phone? .fspback — the password protects your scheduled content from strangers. Restoring a file Send /import to the bot, attach the .fsback or .fspback file, enter the password if asked, then choose Overwrite (replace current data) or Add (merge with current data). Export a fresh backup before you overwrite anything.
+Short answer: both are the same complete backup — the only difference is the password . A .fspback file is a Fast Scheduler Protected Backup — a password-protected .fsback file. The extra “p” stands for protected . What each format is .fsback — a Fast Scheduler Backup : a full backup of your Fast Scheduler data with no password . Anyone who gets the file can restore it, so treat it like a plain-text secret. .fspback — a Fast Scheduler Protected Backup : the same backup, encrypted . Restoring asks for the password you set when creating it. Without the password the data inside cannot be read. When you tap Create Backup (or send /backup ), the bot asks whether you want password protection. Choosing no password produces .fsback ; setting a password (and an optional hint) produces .fspback . A Premium feature — backups are part of the Export &amp; Backup toolkit that unlocks with Premium. What is inside either file Both formats package your selected data — scheduled messages, recurring messages, settings, and more — into one archive you can download, store in the cloud, or move to another account. Media you saved in Media Storage is referenced, not re-uploaded, so files stay small. Which one should you pick? Restoring to your own account right now? .fsback is fine and faster to use. Keeping the file long-term, sending it to a teammate, or migrating to a new phone? .fspback — the password protects your scheduled content from strangers. Restoring a file Send /import to the bot, attach the .fsback or .fspback file, enter the password if asked, then choose Overwrite (replace current data) or Add (merge with current data). Export a fresh backup before you overwrite anything.
 
 Q: Is .fspback more secure than .fsback?
 A: Yes. A .fspback file is encrypted with the password you set; a .fsback file is not protected at all. If the backup contains bot tokens or private content, prefer .fspback.

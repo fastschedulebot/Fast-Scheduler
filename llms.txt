@@ -6,7 +6,7 @@
 - Bot: https://t.me/FastSchedulerBot
 - Support / feedback bot (a human reads every ticket): https://t.me/FastSchedulerSupport_bot
 - Help Center (interactive search): https://fastschedulebot.github.io/Fast-Scheduler/help.html
-- Blog (Telegram channel growth guides): https://fastschedulebot.github.io/Fast-Scheduler/blog/ (75 articles)
+- Blog (Telegram channel growth guides): https://fastschedulebot.github.io/Fast-Scheduler/blog/ (77 articles)
 - Full help corpus for AI retrieval: https://fastschedulebot.github.io/Fast-Scheduler/llms-full.txt (308 articles)
 - Pricing: Free plan (1 channel, 100 pending scheduled messages, 100 sends/channel/month, 1 recurring message); Premium $6.83/month or $68.03/year (3 channels, unlimited sends, unlimited recurring, 100MB media, leaderboards, backups).
 - Privacy Policy: https://fastschedulebot.github.io/Fast-Scheduler/legal/privacy.html
