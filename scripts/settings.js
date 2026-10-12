@@ -278,6 +278,56 @@
     }, { passive: true });
   })();
 
+  /* ---------- Fullscreen exit pill (reader focus modes) ----------
+     hc-fs (help) and blog-fs (blog) slide the navbar away and let the
+     article toolbar scroll off, stranding touch readers with no visible way
+     out — Escape exists only on keyboards. A floating exit pill appears
+     whenever either mode is on and uses the page's own exit path, so state
+     (localStorage + toggle paint) stays in sync. Styled in main.css. */
+  (function () {
+    var LABELS = { en: 'Exit fullscreen', ru: 'Выйти из полноэкранного' };
+    var fab = document.createElement('button');
+    fab.type = 'button';
+    fab.className = 'fs-exit-fab';
+    fab.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3v3a2 2 0 0 1-2 2H3"/><path d="M16 3v3a2 2 0 0 0 2 2h3"/><path d="M8 21v-3a2 2 0 0 1 2-2h3"/><path d="M16 21v-3a2 2 0 0 0-2-2h-3"/></svg><span></span>';
+    var label = fab.querySelector('span');
+    function lang() { try { return (window.FS_LANG && FS_LANG.get() === 'ru') ? 'ru' : 'en'; } catch (e) { return 'en'; } }
+    function paint() {
+      var on = root.classList.contains('hc-fs') || root.classList.contains('blog-fs');
+      var t = LABELS[lang()];
+      label.textContent = t;
+      fab.setAttribute('aria-label', t);
+      fab.classList.toggle('show', on);
+    }
+    function exit() {
+      try { if (root.classList.contains('hc-fs') && window.__hcExitFs) window.__hcExitFs(); }
+      catch (e) {}
+      try {
+        if (root.classList.contains('blog-fs')) {
+          try { localStorage.setItem('fs-blog-fs', 'off'); } catch (e2) {}
+          root.classList.remove('blog-fs');
+          Array.prototype.forEach.call(document.querySelectorAll('[data-blog-fs]'),
+            function (b) { b.classList.remove('on'); b.setAttribute('aria-checked', 'false'); });
+        }
+      } catch (e) {}
+      paint();
+    }
+    fab.addEventListener('click', function (e) { e.stopPropagation(); exit(); });
+    /* help-hub.js already exits hc-fs on Escape; this covers blog-fs (and
+       static pages whose inline reader has no Escape handler). Idempotent. */
+    document.addEventListener('keydown', function (e) {
+      if ((e.key === 'Escape' || e.key === 'Esc') && root.classList.contains('blog-fs')) exit();
+    });
+    if (document.body) document.body.appendChild(fab);
+    else document.addEventListener('DOMContentLoaded', function () { document.body.appendChild(fab); });
+    if ('MutationObserver' in window) {
+      new MutationObserver(function () { paint(); })
+        .observe(root, { attributes: true, attributeFilter: ['class'] });
+    }
+    window.addEventListener('fs-lang-change', paint);
+    paint();
+  })();
+
   syncDark(); syncAnim(); syncFx(); syncKeys();
   applyFont(readFont());
 

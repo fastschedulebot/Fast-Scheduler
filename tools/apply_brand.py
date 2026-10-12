@@ -34,10 +34,14 @@ ROOT = Path(__file__).resolve().parent.parent
 WEBSITE = ROOT / "website"
 
 ICON_LINKS = (
-    '<link rel="icon" href="{p}favicon-32.png" sizes="32x32" type="image/png">\n'
+    '<link rel="icon" href="{p}favicon.ico" sizes="any">\n'
+    '  <link rel="icon" href="{p}favicon.svg" type="image/svg+xml">\n'
+    '  <link rel="icon" href="{p}favicon-32.png" sizes="32x32" type="image/png">\n'
     '  <link rel="icon" href="{p}icon-48.png" sizes="48x48" type="image/png">\n'
     '  <link rel="icon" href="{p}favicon-16.png" sizes="16x16" type="image/png">\n'
-    '  <link rel="icon" href="{p}brand-logo.png" type="image/png">'
+    '  <link rel="icon" href="{p}brand-logo.png" sizes="256x256" type="image/png">\n'
+    '  <link rel="apple-touch-icon" href="{p}apple-touch-icon.png" sizes="180x180">\n'
+    '  <link rel="manifest" href="{p}site.webmanifest">'
 )
 
 # The old inline SVG favicon, as a single link element.
@@ -117,10 +121,14 @@ def patch_help(text: str) -> tuple[str, int]:
         # build_help writes every page with an explicit relative prefix already
         # in scope as `rel`, so the links stay depth-correct.
         new = ('FAVICON = (\n'
+               '    \'<link rel="icon" href="{rel}/favicon.ico" sizes="any">\\n\'\n'
+               '    \'  <link rel="icon" href="{rel}/favicon.svg" type="image/svg+xml">\\n\'\n'
                '    \'<link rel="icon" href="{rel}/favicon-32.png" sizes="32x32" type="image/png">\\n\'\n'
                '    \'  <link rel="icon" href="{rel}/icon-48.png" sizes="48x48" type="image/png">\\n\'\n'
                '    \'  <link rel="icon" href="{rel}/favicon-16.png" sizes="16x16" type="image/png">\\n\'\n'
-               '    \'  <link rel="icon" href="{rel}/brand-logo.png" type="image/png">\'\n'
+               '    \'  <link rel="icon" href="{rel}/brand-logo.png" sizes="256x256" type="image/png">\\n\'\n'
+               '    \'  <link rel="apple-touch-icon" href="{rel}/apple-touch-icon.png" sizes="180x180">\\n\'\n'
+               '    \'  <link rel="manifest" href="{rel}/site.webmanifest">\'\n'
                ')\n')
         text = HELP_FAVICON.sub(lambda m: new, text, count=1)
         n += 1

@@ -16,7 +16,7 @@
     STR: {
       settings: 'Настройки', dark: 'Тёмная тема', anim: 'Анимации', fx: 'Эффекты',
       keys: 'Горячие клавиши', seeKeys: 'Показать клавиши', help: 'Помощь', support: 'Чат поддержки',
-      openBot: 'Открыть бота', openShort: 'Открыть', langLabel: 'Язык', openHelp: 'Открыть центр помощи',
+      openBot: 'Открыть', openShort: 'Открыть', langLabel: 'Язык', openHelp: 'Открыть центр помощи',
       recent: 'Недавние запросы', searchPh: 'Поиск по центру помощи…',
       openMenu: 'Открыть меню', closeMenu: 'Закрыть меню'
     },
@@ -34,7 +34,7 @@
       'Blog': 'Блог',
       'Help': 'Помощь',
       'Help Center': 'Центр помощи',
-      'Open Bot': 'Открыть бота',
+      'Open Bot': 'Открыть',
       // hero (split across inline tags — part keys keep <span>/<b> intact)
       'Your channel': 'Ваш канал',
       'posts itself.': 'публикуется сам.',

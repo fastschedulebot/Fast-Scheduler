@@ -121,12 +121,15 @@ def _comparison_filled():
     percent = round(saved / (monthly * 12) * 100) if monthly else 0
     savings_text = f"{months_free} MONTHS FREE - Save {percent}%" if saved > 0 else ""
     kwargs = get_comparison_kwargs(dash_empty=True)
+    _support_bot = os.getenv('SUPPORT_BOT_USERNAME', 'FastSchedulerSupport_bot').lstrip('@')
+    _support_url = f'https://t.me/{_support_bot}?start=help_premium'
     kwargs.update(
         monthly_label=f"${monthly:.2f}/month",
         yearly_label=f"${yearly:.2f}/year",
         yearly_savings=savings_text,
         reports_free=kwargs['limit_report_schedules_free'],
         reports_prem=kwargs['limit_report_schedules_prem'],
+        support_url=_support_url,
     )
     try:
         rich = rich.format(**kwargs)

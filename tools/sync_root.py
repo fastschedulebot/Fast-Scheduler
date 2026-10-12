@@ -15,6 +15,8 @@ PUB = ['index.html', 'help.html', '404.html', 'robots.txt', 'sitemap.xml',
        # back to its default globe.
        'brand-logo.png', 'brand-logo-128.png', 'brand-logo-64.png',
        'icon-96.png', 'icon-48.png', 'favicon-32.png', 'favicon-16.png',
+       'favicon.ico', 'favicon.svg', 'site.webmanifest',
+       'icon-192.png', 'icon-512.png',
        'storage_state.json', '_headers', 'google7ebfb86d3a3c2fa9.html',
        # IndexNow ownership key. Must be served from the site root or every
        # submission is rejected with 422 key_not_found. See tools/indexnow.py.

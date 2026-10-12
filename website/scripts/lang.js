@@ -1,10 +1,9 @@
 // Website language: EN/RU switcher, persisted in localStorage (fs-lang).
-// Liquid-glass EN/RU segmented control in #settingsMenu.
-// Full-site RU: chrome (settings/nav/footer/search) + index sections
-// (hero/features/how/pricing/FAQ/CTA) + legal/blog/help chrome
-// via exact-text map with safe revert (dataset.fsEn). Static help/legal pages
-// use their complete server-rendered Russian counterparts; blog pages use the
-// client-side article dictionary where a Russian counterpart is not available.
+// Dark pill EN/RU control in #settingsMenu (see styles/lang.css).
+// Russian covers the site chrome (settings/nav/footer/search) plus the
+// landing page. Help center, blog and legal articles are English-only:
+// switching to RU there keeps the English document, translates the chrome
+// and shows a "not yet translated" notice instead of navigating away.
 (function () {
   'use strict';
   var STR = {
@@ -18,7 +17,7 @@
     ru: {
       settings: 'Настройки', dark: 'Тёмная тема', anim: 'Анимации', fx: 'Эффекты',
       keys: 'Горячие клавиши', seeKeys: 'Показать клавиши', help: 'Помощь', support: 'Чат поддержки',
-      openBot: 'Открыть бота', openShort: 'Открыть', langLabel: 'Язык', openHelp: 'Открыть центр помощи',
+      openBot: 'Открыть', openShort: 'Открыть', langLabel: 'Язык', openHelp: 'Открыть центр помощи',
       recent: 'Недавние запросы', searchPh: 'Поиск по центру помощи…',
       openMenu: 'Открыть меню', closeMenu: 'Закрыть меню'
     }
@@ -167,13 +166,28 @@
       return document.documentElement.getAttribute('lang') === 'ru' ? 'ru' : 'en';
     } catch (e) { return 'en'; }
   }
+  /* Help center, blog and legal: article bodies are English-only, only the
+     site chrome is translated. Returns 'help' | 'blog' | 'legal' | '' for a
+     pathname (stale /ru/ content URLs included). */
+  function sectionKind(path) {
+    try {
+      var p = typeof path === 'string' ? path : location.pathname;
+      if (/(^|\/)help(\.html|\/|$)/.test(p)) return 'help';
+      if (/(^|\/)blog(\/|$)/.test(p)) return 'blog';
+      if (/(^|\/)legal(\/|$)/.test(p)) return 'legal';
+    } catch (e) {}
+    return '';
+  }
+  function isContentSection() { return !!sectionKind(); }
+
   function staticLanguageCounterpart(lang) {
-    /* Help, legal, blog, and landing pages have server-rendered Russian copies.
-       Moving to that paired document prevents a half-translated page when a
-       visitor changes language: article bodies, legal text, metadata, and
-       navigation all change together. */
+    /* Only the landing page (and 404) have a server-rendered Russian copy.
+       Help, blog and legal stay on the English document when switching to
+       RU: lang.js translates the chrome client-side and paints the
+       "not yet translated" notice over the English bodies. */
     try {
       var p = location.pathname;
+      if (lang === 'ru' && sectionKind(p)) return '';
       var base = '/Fast-Schedule/';
       var isArchive = p.indexOf(base + 'legal/history/') === 0;
       var isRuArchive = p.indexOf(base + 'ru/legal/history/') === 0;
@@ -341,6 +355,68 @@
   // split headings half-English. translateTextNode() above replaces only
   // text nodes, so markup, icons and layout always survive.
 
+  /* "Not yet translated" notice for help / blog / legal in RU mode. */
+  function removeNoRu() {
+    try { var old = document.getElementById('fsNoRu'); if (old && old.parentNode) old.parentNode.removeChild(old); } catch (e) {}
+  }
+  function paintNoRu(show) {
+    removeNoRu();
+    if (!show) return;
+    var kind = sectionKind();
+    if (!kind) return;
+    // Dismissed this session: stay dismissed (per section).
+    try { if (window.sessionStorage && sessionStorage.getItem('fs-noru-hide') === kind) return; } catch (e) {}
+    var ru, en;
+    if (kind === 'help') {
+      ru = 'Справочный центр пока не переведён на русский язык.';
+      en = 'The Help Center is not yet translated into Russian.';
+    } else if (kind === 'blog') {
+      ru = 'Блог пока не переведён на русский язык.';
+      en = 'The Blog is not yet translated into Russian.';
+    } else {
+      var name = '';
+      try {
+        var h1 = document.querySelector('article.doc h1');
+        if (h1) name = h1.textContent.trim();
+      } catch (e) {}
+      if (name) {
+        ru = 'Страница «' + name + '» пока не переведена на русский язык.';
+        en = '\u201c' + name + '\u201d is not yet translated into Russian.';
+      } else {
+        ru = 'Эта страница пока не переведена на русский язык.';
+        en = 'This page is not yet translated into Russian.';
+      }
+    }
+    try {
+      var bar = document.createElement('div');
+      bar.id = 'fsNoRu';
+      bar.className = 'fs-noru';
+      bar.setAttribute('role', 'note');
+      bar.setAttribute('data-no-ru', '1');
+      var lineRu = document.createElement('span');
+      lineRu.className = 'fs-noru-ru';
+      lineRu.textContent = ru;
+      var lineEn = document.createElement('span');
+      lineEn.className = 'fs-noru-en';
+      lineEn.textContent = en;
+      bar.appendChild(lineRu);
+      bar.appendChild(lineEn);
+      var dismiss = document.createElement('button');
+      dismiss.type = 'button';
+      dismiss.className = 'fs-noru-x';
+      dismiss.setAttribute('aria-label', 'Dismiss');
+      dismiss.textContent = '\u00d7';
+      dismiss.addEventListener('click', function () {
+        try { if (window.sessionStorage) sessionStorage.setItem('fs-noru-hide', kind); } catch (e) {}
+        removeNoRu();
+      });
+      bar.appendChild(dismiss);
+      var main = document.querySelector('main');
+      if (main) main.insertBefore(bar, main.firstChild);
+      else if (document.body) document.body.insertBefore(bar, document.body.firstChild);
+    } catch (e) {}
+  }
+
   function apply(lang) {
     var ru = lang === 'ru';
     var d = STR[lang] || STR.en;
@@ -366,6 +442,13 @@
       else a.childNodes.forEach(function (n) {
         if (n.nodeType === 3 && n.textContent.trim().length > 2) n.textContent = ' ' + txt + ' ';
       });
+      /* RU shows the short "Открыть" (the full "Открыть бота" is ~50px
+         wider and breaks the navbar) — the full label lives in the hover
+         tooltip instead. EN shows the full text, so no tooltip needed. */
+      try {
+        if (ru) a.setAttribute('title', 'Открыть бота');
+        else a.removeAttribute('title');
+      } catch (e) {}
       /* The phone bar paints the short label from data-cta-short (CSS zeroes the
          long text so brand + CTA + gear + burger fit a 390px row). */
       a.setAttribute('data-cta-short', d.openShort);
@@ -398,8 +481,13 @@
     // Text-node level: SVG icons, <b>/<span> formatting and alignment survive.
     applyTree(document.body, ru);
     applyFixups(ru);
-    // full article bodies (help center + blog titles/descs), lazy + revert-safe
-    try { translateContent(ru); } catch (e) {}
+    // Full article bodies (blog titles/descs, landing sections) via the lazy
+    // ru-content.js dictionary — but never on help/blog/legal pages, which
+    // are English-only: bodies stay in English and a notice is shown instead.
+    try {
+      if (isContentSection()) { translateContent(false); paintNoRu(ru); }
+      else { removeNoRu(); translateContent(ru); }
+    } catch (e) {}
     // segmented control state + label
     document.querySelectorAll('.fs-lang-label').forEach(function (el) { el.textContent = d.langLabel; });
     document.querySelectorAll('.fs-lang-seg button').forEach(function (b) {
@@ -460,6 +548,18 @@
     el.onerror = function () { contentLoading = false; contentStarted = false; };
     document.head.appendChild(el);
   }
+  // Pass 2 must not merge across ELEMENT boundaries: joining text split by
+  // <b>/<a>/… and replacing it wholesale empties those elements, destroying
+  // bold, links and other inline formatting. Whitespace text between nodes
+  // is fine — only real elements block a merge.
+  function textAdjacent(a, b) {
+    var s = a ? a.nextSibling : null;
+    while (s && s !== b) {
+      if (s.nodeType === 1) return false;
+      s = s.nextSibling;
+    }
+    return s === b;
+  }
   function contentTouch(n) {
     for (var i = 0; i < contentOrig.length; i++) {
       if (contentOrig[i].n === n) return;
@@ -504,7 +604,9 @@
       var m = kk.toLowerCase().match(/[a-z\u00c0-\u024f\u0400-\u04ff]{4,}/);
       if (m) { var ak = m[0]; if (!Object.prototype.hasOwnProperty.call(anchor, ak)) anchor[ak] = []; anchor[ak].push(kk); }
     });
-    var scopes = document.querySelectorAll('.doc, .blog-doc, .bento, .blog-chips');
+    // .hc-art added 2026-10-09: help article bodies used to be skipped, so
+    // switching to RU translated the chrome but left every guide in English.
+    var scopes = document.querySelectorAll('.doc, .blog-doc, .hc-art, .bento, .blog-chips');
     if (!scopes.length) return;
     Array.prototype.forEach.call(scopes, function (scope) {
       // archived legal versions stay in their original language
@@ -539,6 +641,8 @@
           var blk = blockOf(nodes[i], scope);
           var same = true;
           for (j = 1; j < w; j++) { if (blockOf(nodes[i + j], scope) !== blk) { same = false; break; } }
+          if (!same) continue;
+          for (j = 1; j < w; j++) { if (!textAdjacent(nodes[i + j - 1], nodes[i + j])) { same = false; break; } }
           if (!same) continue;
           var joined = '';
           for (j = 0; j < w; j++) joined += nodes[i + j].nodeValue;
@@ -622,10 +726,15 @@
     if (!menu || menu.querySelector('.fs-lang-seg')) return;
     var wrap = document.createElement('div');
     wrap.className = 'fs-lang-row';
+    // Inline SVG flags: emoji flags render as "GB"/"RU" letter codes on
+    // systems without color-emoji fonts (notably Windows) — vector flags
+    // always look right. .fs-flag clips them to a rounded chip (lang.css).
+    var flagGb = '<svg viewBox="0 0 18 13" aria-hidden="true"><clipPath id="fsFlagGb"><rect width="18" height="13" rx="2.5"/></clipPath><g clip-path="url(#fsFlagGb)"><rect width="18" height="13" fill="#012169"/><path d="M0 0l18 13M18 0L0 13" stroke="#fff" stroke-width="2.6"/><path d="M0 0l18 13M18 0L0 13" stroke="#C8102E" stroke-width="1"/><path d="M9 0v13M0 6.5h18" stroke="#fff" stroke-width="4.4"/><path d="M9 0v13M0 6.5h18" stroke="#C8102E" stroke-width="2.6"/></g></svg>';
+    var flagRu = '<svg viewBox="0 0 18 13" aria-hidden="true"><rect width="18" height="13" fill="#fff"/><rect y="4.33" width="18" height="4.34" fill="#0039A6"/><rect y="8.66" width="18" height="4.34" fill="#D52B1E"/></svg>';
     wrap.innerHTML = '<span class="fs-lang-label">Language</span>' +
       '<div class="fs-lang-seg" role="group" aria-label="Language">' +
-      '<button type="button" data-lang="en" aria-pressed="true"><span class="fs-flag">🇬🇧</span>EN</button>' +
-      '<button type="button" data-lang="ru" aria-pressed="false"><span class="fs-flag">🇷🇺</span>RU</button>' +
+      '<button type="button" data-lang="en" aria-pressed="true"><span class="fs-flag">' + flagGb + '</span>EN</button>' +
+      '<button type="button" data-lang="ru" aria-pressed="false"><span class="fs-flag">' + flagRu + '</span>RU</button>' +
       '</div>';
     var head = menu.querySelector('.gp-head');
     if (head && head.nextSibling) menu.insertBefore(wrap, head.nextSibling);

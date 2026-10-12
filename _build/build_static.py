@@ -110,7 +110,7 @@ def page_head(title, desc, canonical, extra_ld='', og_type='article', noindex=Fa
 <meta name="twitter:title" content="{bh.esc(title)}">
 <meta name="twitter:description" content="{bh.esc(desc)}">
 <meta name="twitter:image" content="{og_img}">
-<link rel="icon" href="{bh.FAVICON}">
+{bh.FAVICON}
 {extra_ld}'''
 
 

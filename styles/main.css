@@ -1443,3 +1443,214 @@ html.nav-hidden .hc-jump {
 @media (prefers-reduced-motion: reduce) {
   header.site, .home-nav, .toc-bar, .cookie, .jump-fab, .blog-toc-fab, .hc-toc-fab, .hc-jump { transition: none; }
 }
+
+/* ============ User-reported fixes, round 9 (2026-10-09) ============
+   Generated help/blog pages carry their own inline <style> AFTER this
+   sheet, so overrides below use higher specificity (and !important only
+   where an inline rule sets the same property). The builders should
+   absorb these rules; until then this block is the single point of fix. */
+
+/* 1. Settings panel: normal wide, not cramped. Scoped to #settingsMenu so
+   the help-search popover and version menus keep their own sizes. */
+#settingsMenu.glass-pop {
+  min-width: 300px;
+  width: 344px;
+  max-width: min(360px, calc(100vw - 24px));
+}
+
+/* 2. Empty pager placeholders ("No previous article" / "No next article")
+   sit centered in their cell instead of hugging the left edge. */
+nav.hc-pager > span.hc-card.prev.none,
+nav.hc-pager > span.hc-card.next.none {
+  text-align: center !important;
+  justify-content: center !important;
+}
+.blog-toc-navc.none, .hc-toc-navc.none {
+  text-align: center !important;
+  justify-content: center !important;
+}
+
+/* 3. RU navbar: longer labels must never overlap. Shrink the hub search and
+   collapse pill labels to icons earlier — RU only. Higher specificity than
+   the inline rules, so order does not matter. */
+html[lang="ru"] .nav-unified .nav-center .hc-hsearch { width: min(260px, 100%); }
+html[lang="ru"] .nav-unified .nav-right { min-width: 0; }
+html[lang="ru"] .nav-unified .nav-right .nav-cta { min-width: 0; }
+@media (max-width: 1220px) {
+  html[lang="ru"] .nav-unified .nav-link span { display: none; }
+  html[lang="ru"] .nav-unified .nav-link { padding: 0 11px; height: 40px; }
+  html[lang="ru"] .nav-unified .nav-center .hc-hsearch { width: min(220px, 100%); }
+}
+
+/* 4. Fullscreen exit stays reachable. In fs mode the navbar slides away and
+   the toolbar scrolls off, stranding touch readers (no Escape key). Pin the
+   help toolbar under the viewport top; the floating exit pill (settings.js)
+   covers the blog reader and scrolled states. */
+html.hc-fs .hc-toolbar {
+  position: sticky; top: 10px; z-index: 60;
+  background: color-mix(in srgb, var(--surface) 88%, transparent);
+  -webkit-backdrop-filter: blur(14px) saturate(1.4);
+  backdrop-filter: blur(14px) saturate(1.4);
+  border: 1px solid var(--border); border-radius: 14px;
+  padding: 8px 12px; margin-top: 10px;
+}
+
+/* 5. Width ladder: fullscreen must be at least as wide as wide mode
+   (it used to be narrower: help 920 < 960, blog 960 < 1020). */
+html.hc-fs .hc-content { max-width: 1020px !important; }
+html.blog-fs .blog-doc { max-width: 1120px !important; }
+
+/* 6. Floating fullscreen-exit pill (wired in scripts/settings.js). Hidden
+   unless a focus mode is active. */
+.fs-exit-fab {
+  position: fixed; left: 50%; bottom: calc(18px + env(safe-area-inset-bottom));
+  transform: translateX(-50%) translateY(16px); z-index: 200;
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 11px 20px; border-radius: 999px;
+  font: inherit; font-size: .88rem; font-weight: 750;
+  color: #fff; background: var(--green-strong); border: 0; cursor: pointer;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .35);
+  opacity: 0; visibility: hidden; pointer-events: none;
+  transition: opacity .25s var(--ease-apple), transform .25s var(--ease-apple), visibility 0s .3s;
+}
+html.hc-fs .fs-exit-fab.show, html.blog-fs .fs-exit-fab.show {
+  opacity: 1; visibility: visible; pointer-events: auto;
+  transform: translateX(-50%);
+  transition: opacity .25s var(--ease-apple), transform .25s var(--ease-apple), visibility 0s;
+}
+.fs-exit-fab svg { width: 15px; height: 15px; flex: none; }
+.fs-exit-fab:hover { filter: brightness(1.07); }
+
+/* ============ User-reported fixes, round 10 (2026-10-10) ============ */
+
+/* 1. Language switcher + notice + RU guards live here now (moved out of
+   styles/lang.css, which most pages never loaded — blog/help articles had
+   an unstyled switcher and a broken untranslated-notice). main.css loads
+   on every page, so one copy covers the whole site. */
+.fs-lang-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: #1c1e22;
+  border-radius: 14px;
+  padding: 10px 10px 10px 14px;
+  margin: 2px 0 6px;
+}
+.fs-lang-label { font-size: 14px; font-weight: 500; color: #f2f4f7; opacity: 1; }
+.fs-lang-seg {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 4px;
+  border: 0;
+  border-radius: 999px;
+  background: #111317;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, .45);
+}
+.fs-lang-seg button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  cursor: pointer;
+  padding: 7px 14px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: #9aa0a8;
+  font-size: .85rem;
+  font-weight: 700;
+  opacity: 1;
+  transition: background .18s ease, color .18s ease, transform .12s ease;
+}
+.fs-lang-seg button:hover { color: #d6dade; }
+.fs-lang-seg button:active { transform: scale(.96); }
+.fs-lang-seg button.on { background: #3b4048; color: #fff; box-shadow: 0 1px 3px rgba(0, 0, 0, .4); }
+.fs-lang-seg button .fs-flag {
+  width: 18px; height: 13px; flex: none;
+  border-radius: 3px; overflow: hidden; display: inline-flex;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, .35);
+}
+.fs-lang-seg button .fs-flag svg { width: 100%; height: 100%; display: block; }
+.fs-noru {
+  position: relative;
+  display: block;
+  margin: 14px auto 4px;
+  max-width: 860px;
+  padding: 12px 44px 12px 18px;
+  text-align: center;
+  border-radius: 14px;
+  color: var(--text);
+  background: color-mix(in srgb, #f59e0b 13%, var(--surface));
+  border: 1px solid color-mix(in srgb, #f59e0b 45%, transparent);
+}
+.fs-noru-ru { display: block; font-weight: 700; }
+.fs-noru-en { display: block; margin-top: 2px; font-size: .88em; opacity: .65; }
+.fs-noru-x {
+  position: absolute; top: 8px; right: 8px;
+  width: 28px; height: 28px; display: grid; place-items: center;
+  cursor: pointer; border: 0; border-radius: 50%;
+  background: transparent; color: var(--text-dim);
+  font-size: 18px; line-height: 1;
+  transition: background .15s ease, color .15s ease;
+}
+.fs-noru-x:hover { background: color-mix(in srgb, var(--text) 12%, transparent); color: var(--text); }
+html[lang="ru"] .oneline,
+html[lang="ru"] .sec-head h2,
+html[lang="ru"] .final-cta h2,
+html[lang="ru"] .hero-copy h1,
+html[lang="ru"] .hero-finale-head h2 { white-space: normal; overflow-wrap: break-word; }
+html[lang="ru"] .pprice { white-space: normal; }
+html[lang="ru"] .pprice small { white-space: nowrap; }
+html[lang="ru"] .foot-open-t { white-space: normal; }
+html[lang="ru"] .cta-big,
+html[lang="ru"] .foot-open,
+html[lang="ru"] .nav-cta-sm,
+html[lang="ru"] .nav-cta-m { white-space: normal; text-align: center; }
+html[lang="ru"] .foot-open-t { text-align: left; }
+html[lang="ru"] .faq-glass summary,
+html[lang="ru"] .plan-g li,
+html[lang="ru"] .feat p,
+html[lang="ru"] .step p { hyphens: none; overflow-wrap: break-word; }
+html[lang="ru"] .grad { -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+
+/* 2. Empty pager placeholders ("No previous article") truly centered.
+   The placeholder is a <span>, not a link, so it never got the flex
+   row the real cards have — center it explicitly (beats inline rules). */
+nav.hc-pager > span.hc-card.prev.none,
+nav.hc-pager > span.hc-card.next.none,
+.blog-toc-nav > span.blog-toc-navc.prev.none,
+.blog-toc-nav > span.blog-toc-navc.next.none {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  min-height: 88px;
+}
+nav.hc-pager > span.hc-card.prev.none > span,
+nav.hc-pager > span.hc-card.next.none > span {
+  align-items: center !important;
+  text-align: center !important;
+}
+
+/* 3. Bigger header brand mark (was a 30px tile). */
+.brand-mark { width: 38px !important; height: 38px !important; }
+.brand-mark img { width: 38px !important; height: 38px !important; }
+@media (max-width: 560px) { .brand-mark img { width: 32px !important; height: 32px !important; } }
+.brand-dock .brand .logo-dot { width: 36px !important; height: 36px !important; }
+
+/* 4. RU navbar: with the short "Открыть" CTA plus room to shrink, the
+   pills must never overlap or clip. Earlier collapse (1350px), tighter
+   gaps, search gives way first. EN untouched. */
+html[lang="ru"] .nav-unified .nav-group { min-width: 0; }
+html[lang="ru"] .nav-unified .nav-center { min-width: 0; flex: 1 1 auto; }
+html[lang="ru"] .nav-unified .nav-cta { padding-left: 14px; padding-right: 14px; white-space: nowrap; }
+html[lang="ru"] .nav-unified .nav-link { gap: 6px; }
+html[lang="ru"] .nav-unified .nav-center .hc-hsearch { width: min(240px, 100%); flex: 0 1 auto; min-width: 0; }
+@media (max-width: 1350px) {
+  html[lang="ru"] .nav-unified .nav-link span { display: none; }
+  html[lang="ru"] .nav-unified .nav-link { padding: 0 11px; height: 40px; }
+  html[lang="ru"] .nav-unified .nav-center .hc-hsearch { width: min(200px, 100%); }
+}

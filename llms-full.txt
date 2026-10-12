@@ -1,6 +1,6 @@
 # Fast Scheduler — complete help center corpus
 
-Exported 2026-10-07. 308 articles. Canonical pages: https://fastschedulebot.github.io/Fast-Schedule/help/a/<article-id>.html
+Exported 2026-10-09. 308 articles. Canonical pages: https://fastschedulebot.github.io/Fast-Schedule/help/a/<article-id>.html
 
 # Getting Started
 
@@ -638,7 +638,7 @@ What Premium gives you: • 3 connected channels and 3 sender bots (Free: 1/1). 
 ## Compare Plans
 URL: https://fastschedulebot.github.io/Fast-Schedule/help/a/premium_compare.html
 
-The comparison table in the Premium menu shows every limit side by side: • Channels: 1 free / 3 premium • Sender bots: 1 free / 3 premium • Scheduled messages: 100 free / Unlimited premium • Recurring messages: 1 free / Unlimited premium • Sent messages: 100 free / Unlimited premium • Media storage: 1 (max 100) free / 20 (500) premium • Videos: up to 25MB free / up to 50MB premium • Video in storage: No free / up to 50MB premium • Max media size: 10 MB free / 100 MB premium Prices and payment methods are shown in the Premium menu. Feature Free Premium Recurring messages 1 Unlimited Scheduled messages 100 Unlimited Monthly sends 100 Unlimited Videos in storage — up to 50MB Signatures 1 free trial Unlimited Multi-date scheduling — ✓ Connected channels 1 3 Sender bots 1 3 Video uploads up to 25MB up to 50MB Max media size 10 MB 100 MB 4K media — Yes Statistics Basic Advanced Search Included Included Calendar Included Included Backup &amp; export — ✓ Leaderboard — ✓ Reports — Unlimited
+The comparison table in the Premium menu shows every limit side by side: • Channels: 1 free / 3 premium • Sender bots: 1 free / 3 premium • Scheduled messages: 100 free / Unlimited premium • Recurring messages: 1 free / Unlimited premium • Sent messages: 100 free / Unlimited premium • Media storage: 1 (max 100) free / 20 (500) premium • Videos: up to 25MB free / up to 50MB premium • Video in storage: No free / up to 50MB premium • Max media size: 10 MB free / 100 MB premium Prices and payment methods are shown in the Premium menu. Feature Free Premium Reports — Unlimited Recurring messages 1 Unlimited Scheduled messages 100 Unlimited Monthly sends 100 Unlimited Signatures 1 free trial Unlimited Connected channels 1 3 Sender bots 1 3 Video uploads up to 25MB up to 50MB Max media size 10 MB 100 MB Videos in storage — up to 50MB 4K media — ✓ Statistics Basic Advanced Search ✓ ✓ Calendar ✓ ✓ Multi-date scheduling — ✓ Backup &amp; export — ✓ Leaderboard — ✓
 
 ## Buy Premium
 URL: https://fastschedulebot.github.io/Fast-Schedule/help/a/premium_buy.html
@@ -949,7 +949,7 @@ Free plan: 1 sender bot. Premium: up to 3 . Each bot is tied to one channel. If 
 ## Media Limit
 URL: https://fastschedulebot.github.io/Fast-Schedule/help/a/limit_media.html
 
-Media uploads are capped by your plan: • Max media size: 10 MB free / 100 MB premium • Video upload: up to 25MB free / up to 50MB premium • Video in storage: No free / up to 50MB premium • 4K media: — free / Yes premium Photos/videos are compressed automatically on upload (see Media Compression ).
+Media uploads are capped by your plan: • Max media size: 10 MB free / 100 MB premium • Video upload: up to 25MB free / up to 50MB premium • Video in storage: No free / up to 50MB premium • 4K media: — free / ✓ premium Photos/videos are compressed automatically on upload (see Media Compression ).
 
 ## Storage Limit
 URL: https://fastschedulebot.github.io/Fast-Schedule/help/a/limit_storage_detail.html

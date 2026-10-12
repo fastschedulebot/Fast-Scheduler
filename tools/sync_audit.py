@@ -7,6 +7,8 @@ ROOT_WEB = ['index.html', 'help.html', '404.html', 'robots.txt', 'sitemap.xml',
             'styles', 'fonts', 'apple-touch-icon.png', 'og-cover-v2.png',
             'brand-logo.png', 'brand-logo-128.png', 'brand-logo-64.png',
             'icon-96.png', 'icon-48.png', 'favicon-32.png', 'favicon-16.png',
+            'favicon.ico', 'favicon.svg', 'site.webmanifest',
+            'icon-192.png', 'icon-512.png',
             'storage_state.json', '_headers',
             '5817133906fc4ab78b0f19ca52bf8f58.txt']
 

@@ -23,8 +23,7 @@
   <meta name="apple-mobile-web-app-title" content="Fast Scheduler">
   <meta name="format-detection" content="telephone=no">
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0e2a1d">
-  <link rel="apple-touch-icon" href="apple-touch-icon.png">
-  <link rel="alternate" type="application/rss+xml" title="Fast Scheduler Blog" href="blog/rss.xml">
+    <link rel="alternate" type="application/rss+xml" title="Fast Scheduler Blog" href="blog/rss.xml">
   <meta name="duckduckbot" content="index, follow">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Fast Scheduler">
@@ -36,10 +35,14 @@
   <meta name="twitter:title" content="Fast Scheduler — Telegram Channel Post Scheduler">
   <meta name="twitter:description" content="Set it once. Fast Scheduler posts for you every day — batch-schedule weeks of content in minutes, free to start.">
   <meta name="twitter:image" content="https://fastschedulebot.github.io/Fast-Schedule/og-cover-v2.png">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
   <link rel="icon" href="icon-48.png" sizes="48x48" type="image/png">
   <link rel="icon" href="favicon-16.png" sizes="16x16" type="image/png">
-  <link rel="icon" href="brand-logo.png" type="image/png">
+  <link rel="icon" href="brand-logo.png" sizes="256x256" type="image/png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180">
+  <link rel="manifest" href="site.webmanifest">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -90,8 +93,7 @@
   </script>
   <link rel="preload" href="fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="styles/main.css?v=20261006a1">
-  <link rel="stylesheet" href="styles/lang.css?v=20261002b1">
+<link rel="stylesheet" href="styles/main.css?v=20261010a1">
 <link rel="stylesheet" href="styles/liquid-nav.css?v=20261005d1">
   <style>
     :root {
@@ -197,9 +199,9 @@
     /* Brand mark: the new artwork is a self-contained green badge, so the old
        dark-green chip behind it would only muddy the edge. */
     .home-nav .brand .logo-dot { background: none; overflow: visible; }
-    .home-nav .brand .logo-dot img { width: 30px; height: 30px; object-fit: contain; display: block; }
+    .home-nav .brand .logo-dot img { width: 38px; height: 38px; object-fit: contain; display: block; }
     @media (max-width: 560px) {
-      .home-nav .brand .logo-dot img { width: 26px; height: 26px; }
+      .home-nav .brand .logo-dot img { width: 32px; height: 32px; }
     }
     /* Safety net: if the bar still runs out of room (a user can raise the font
        size in Settings, which widens the Russian labels again), let the brand
@@ -1602,7 +1604,7 @@
 <script src="scripts/theme.js?v=20260930a1"></script>
 <script defer src="scripts/nav-hide.js?v=20260930a2"></script>
 <script defer src="scripts/settings.js?v=20261005d1"></script>
-  <script defer src="scripts/ru-chrome.js?v=20261007a1"></script><script defer src="scripts/lang.js?v=20261007a1"></script>
+  <script defer src="scripts/ru-chrome.js?v=20261010a2"></script><script defer src="scripts/lang.js?v=20261010a2"></script>
 <script defer src="scripts/hotkeys.js?v=20261006a1"></script>
 <script defer src="scripts/scroll-jump.js?v=20261006a1"></script>
 <script>
@@ -1710,7 +1712,7 @@
   })();
 </script>
 
-<script defer src="scripts/site-config.js?v=20260930a1"></script>
+<script defer src="scripts/site-config.js?v=20261009a1"></script>
 <script defer src="scripts/main.js?v=20261007a1"></script>
 <script defer src="scripts/hero-demo.js?v=20261006a2"></script>
 </body>

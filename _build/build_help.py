@@ -300,12 +300,15 @@ def _filled_comparison_markdown():
         months_free = int(round(saved / monthly)) if monthly else 0
         percent = round(saved / (monthly * 12) * 100) if monthly else 0
         kwargs = get_comparison_kwargs(dash_empty=True)
+        _support_bot = os.getenv('SUPPORT_BOT_USERNAME', 'FastSchedulerSupport_bot').lstrip('@')
+        _support_url = f'https://t.me/{_support_bot}?start=help_premium'
         kwargs.update(
             monthly_label=f"${monthly:.2f}/month",
             yearly_label=f"${yearly:.2f}/year",
             yearly_savings=f"{months_free} MONTHS FREE - Save {percent}%" if saved > 0 else "",
             reports_free=kwargs['limit_report_schedules_free'],
             reports_prem=kwargs['limit_report_schedules_prem'],
+            support_url=_support_url,
         )
         return rich.format(**kwargs)
     except Exception:
@@ -2378,10 +2381,14 @@ def render_article(n, group, by_id, order_index):
 
 
 FAVICON = (
-    '<link rel="icon" href="{rel}/favicon-32.png" sizes="32x32" type="image/png">\n'
+    '<link rel="icon" href="{rel}/favicon.ico" sizes="any">\n'
+    '  <link rel="icon" href="{rel}/favicon.svg" type="image/svg+xml">\n'
+    '  <link rel="icon" href="{rel}/favicon-32.png" sizes="32x32" type="image/png">\n'
     '  <link rel="icon" href="{rel}/icon-48.png" sizes="48x48" type="image/png">\n'
     '  <link rel="icon" href="{rel}/favicon-16.png" sizes="16x16" type="image/png">\n'
-    '  <link rel="icon" href="{rel}/brand-logo.png" type="image/png">'
+    '  <link rel="icon" href="{rel}/brand-logo.png" sizes="256x256" type="image/png">\n'
+    '  <link rel="apple-touch-icon" href="{rel}/apple-touch-icon.png" sizes="180x180">\n'
+    '  <link rel="manifest" href="{rel}/site.webmanifest">'
 )
 
 
