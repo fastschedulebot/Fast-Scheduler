@@ -64,7 +64,7 @@ The Services provide a comprehensive message-automation platform for Telegram. T
 
 8. **Search**: Search within your own scheduled and recurring messages by keyword, channel, or date range.
 
-9. **Import and export**: Export your full data as a `.fsback` (standard) or `.fspback` (password-encrypted) file. Import previously exported data to restore schedules, channels, signatures, and settings. Supports import from TXT, RTF, ODT, CSV, JSON, `.fsback`, and `.fspback` formats.
+9. **Import and export**: Export your full data as a `.fsback` (Fast Scheduler Backup) or `.fspback` (Fast Scheduler Protected Backup, password-encrypted) file. Import previously exported data to restore schedules, channels, signatures, and settings. Supports import from TXT, RTF, ODT, CSV, JSON, `.fsback`, and `.fspback` formats.
 
 10. **SetDate companion bot**: Use SetDate to visually design a posting calendar (dates and times) and import the resulting schedule directly into the Main Service via an in-bot link.
 
@@ -254,8 +254,8 @@ The Services maintain internal backups of operational data. These backups are st
 ### Manual Export
 You can export your data at any time using the **`/export`** or **`/backup`** commands. Two export formats are available:
 
-- **`.fsback`** — Standard export. Contains all your data in JSON format with an HMAC integrity check. Not encrypted.
-- **`.fspback`** — Password-protected export. Your data is **encrypted (AES-256-GCM) + integrity-protected (HMAC-SHA256)** using a password you provide.
+- **`.fsback`** — Fast Scheduler Backup. Contains all your data in JSON format with an HMAC integrity check. Not encrypted.
+- **`.fspback`** — Fast Scheduler Protected Backup. Your data is **encrypted (AES-256-GCM) + integrity-protected (HMAC-SHA256)** using a password you provide.
 
 A full export includes (where applicable): scheduled messages, recurring messages, channel connections and settings, user settings and preferences, message signatures, referral data, promo code usage, ratings given, feedback submitted, and usage statistics.
 

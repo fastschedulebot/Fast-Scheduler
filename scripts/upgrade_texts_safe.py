@@ -1033,7 +1033,7 @@ if 'help.backup.faq.5.q' not in data:
 
 if 'help.backup.faq.6.q' not in data:
     data['help.backup.faq.6.q'] = "What's the difference between .fsback and .fspback?"
-    data['help.backup.faq.6.a'] = "<b>.fsback</b> is a standard full backup (no password). <b>.fspback</b> is a password-protected backup with encryption (Premium only). Both contain the same data, but .fspback requires a password to restore. To create a .fspback: use <code>/backup</code> → choose password protection → enter your password."
+    data['help.backup.faq.6.a'] = "<b>.fsback</b> is a Fast Scheduler Backup (unencrypted, integrity-checked). <b>.fspback</b> is a Fast Scheduler Protected Backup — encrypted with a password you set (Premium only). Both hold the same data, but .fspback requires the password to restore. To create a .fspback: use <code>/backup</code> → choose Protected Backup → enter your password. Note: if your export includes sender bot tokens, the Protected Backup (.fspback) is chosen automatically."
 
 # Premium FAQs
 if 'help.premium.faq.1.q' not in data:

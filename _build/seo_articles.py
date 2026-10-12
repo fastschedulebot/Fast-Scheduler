@@ -23,16 +23,16 @@ def _a(i, **kw):
 _a('qa_fsback_vs_fspback',
    category='backup',
    title='What Is the Difference Between .fsback and .fspback?',
-   description='Fast Scheduler saves backups as .fsback or .fspback files. Here is exactly what each format contains, when to pick which, and how to restore them.',
+   description='Fast Scheduler saves backups as .fsback (Fast Scheduler Backup) or .fspback (Fast Scheduler Protected Backup) files. Here is exactly what each format contains, when to pick which, and how to restore them.',
    content=(
        "<p>Short answer: <b>both are the same complete backup</b> — the only difference is the "
-       "<b>password</b>. A <code>.fspback</code> file is a password-protected <code>.fsback</code> "
-       "file. The extra “p” stands for <i>protected</i>.</p>"
+       "<b>password</b>. A <code>.fspback</code> file is a <b>Fast Scheduler Protected Backup</b> — a "
+       "password-protected <code>.fsback</code> file. The extra “p” stands for <i>protected</i>.</p>"
        "<h3>What each format is</h3>"
        "<ul>"
-       "<li><b>.fsback</b> — a full backup of your Fast Scheduler data with <b>no password</b>. "
+       "<li><b>.fsback</b> — a <b>Fast Scheduler Backup</b>: a full backup of your Fast Scheduler data with <b>no password</b>. "
        "Anyone who gets the file can restore it, so treat it like a plain-text secret.</li>"
-       "<li><b>.fspback</b> — the <b>same backup, encrypted</b>. Restoring asks for the password you "
+       "<li><b>.fspback</b> — a <b>Fast Scheduler Protected Backup</b>: the <b>same backup, encrypted</b>. Restoring asks for the password you "
        "set when creating it. Without the password the data inside cannot be read.</li>"
        "</ul>"
        "<p>When you tap <b>Create Backup</b> (or send <code>/backup</code>), the bot asks whether you "

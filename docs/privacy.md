@@ -315,8 +315,8 @@ We implement technical and organisational measures appropriate to the nature and
 | **Sender Bot tokens** (in SQLite database `bot.db`) | **AES-256-GCM** | Encryption key provided via environment variable (`TOKEN_ENCRYPTION_KEY`, 32-byte base64-encoded). |
 | **User action logs** (file `user_actions.json`) | **AES-256-GCM** | Key is PBKDF2-derived from `TOKEN_ENCRYPTION_KEY` with a random salt. |
 | **Issue/diagnostic logs** (file `issues.json`) | **AES-256-GCM** | Same key derivation as user action logs. |
-| **Exported backup files** (`.fspback` format) | **AES-256-GCM + HMAC-SHA256** | Encrypted with a key derived from the user-supplied password combined with `FILE_ENCRYPTION_KEY`. |
-| **Standard backup files** (`.fsback` format) | **HMAC-SHA256** (integrity only, no encryption) | Key derived from `FILE_ENCRYPTION_KEY`. |
+| **Exported backup files** (`.fspback` — Fast Scheduler Protected Backup) | **AES-256-GCM + HMAC-SHA256** | Encrypted with a key derived from the user-supplied password combined with `FILE_ENCRYPTION_KEY`. |
+| **Standard backup files** (`.fsback` — Fast Scheduler Backup) | **HMAC-SHA256** (integrity only, no encryption) | Key derived from `FILE_ENCRYPTION_KEY`. |
 | **Bot data storage domains** (JSON files such as scheduled messages, channels, user settings) | **No encryption at rest** | These files contain operational data (message text, channel IDs, preferences) but no credentials. Encryption is not applied as the data needs to be read frequently for bot operation. The data is protected by filesystem-level access controls (see below). |
 
 ### Organisational and technical measures

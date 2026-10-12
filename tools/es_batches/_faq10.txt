@@ -41,7 +41,7 @@ help.backup.faq.4.a ||| Premium feature. Step by step:
 
 <b>Warning:<
 help.backup.faq.5.a ||| @@STORAGE@@A full backup (.fsback / .fspback) includes: all scheduled messages (text, media, settings), all recurring messages, media storage items and boxes, channel connections and settings, bot tokens and assignments, user preferences (language, timezone), and referral data. Everything needed to restore your account to exactly the same state.
-help.backup.faq.6.a ||| <b>.fsback</b> is a standard full backup (no password). <b>.fspback</b> is a password-protected backup with encryption (Premium only). Both contain the same data, but .fspback requires a password to restore. To create a .fspback: use <code>/backup</code> → choose password protection → enter your password.
+help.backup.faq.6.a ||| <b>.fsback</b> is a Fast Scheduler Backup (unencrypted, integrity-checked). <b>.fspback</b> is a Fast Scheduler Protected Backup — encrypted with a password you set (Premium only). Both hold the same data, but .fspback requires the password to restore. To create a .fspback: use <code>/backup</code> → choose Protected Backup → enter your password. Note: if your export includes sender bot tokens, the Protected Backup (.fspback) is chosen automatically.
 help.connect_channel.faq.1.a ||| Step by step:
 1. <b>Add the bot to your channel:</b> Open your channel on Telegram → Channel Info → Administrators → Add Admin → search for <b>@FastSchedulerBot</b> → select it → grant at least <b>Post Messages</b> permission → confirm
 2. <b>Connect in the bot:</b> Click <b>Connected Channel</b> on the main menu → click <b>Connect Channel</b>

@@ -95,8 +95,8 @@
       'Daily, weekly or monthly performance reports delivered straight to your chat — no dashboards to open, no checking manually.': 'Ежедневные, еженедельные или ежемесячные отчёты — прямо в ваш чат. Никаких дашбордов и ручных проверок.',
       'Multi-channel + team admins': 'Мультиканальность и команда',
       'Manage several channels from one bot. Add trusted admins with per-channel permissions so nobody steps on toes.': 'Управляйте несколькими каналами из одного бота. Добавляйте доверенных админов с правами на каждый канал — никто никому не мешает.',
-      'Encrypted backups': 'Зашифрованные бэкапы',
-      'Export everything as a password-encrypted file (AES-256-GCM) and restore on any device. Your content, portable and safe.': 'Выгружайте всё в зашифрованный паролем файл (AES-256-GCM) и восстанавливайте на любом устройстве. Ваш контент — портативный и защищённый.',
+      'Protected backups': 'Защищённые копии',
+      'Export everything as a Fast Scheduler Protected Backup (.fspback, AES-256-GCM encrypted) and restore on any device. Your content, portable and safe.': 'Выгружайте всё как Fast Scheduler Protected Backup (.fspback, шифрование AES-256-GCM) и восстанавливайте на любом устройстве. Ваш контент — портативный и защищённый.',
       // how it works
       'Three steps. Sixty seconds.': 'Три шага. Шестьдесят секунд.',
       'No app to install, no dashboard to learn — if you can send a Telegram message, you already know how to use it.': 'Ничего устанавливать не нужно — если умеете отправлять сообщения в Telegram, вы уже умеете этим пользоваться.',

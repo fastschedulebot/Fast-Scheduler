@@ -45,7 +45,7 @@ help.backup.faq.4.a ||| Premium feature. Step by step:
 help.backup.faq.4.q ||| How do I create a password-protected backup?
 help.backup.faq.5.a ||| @@STORAGE@@A full backup (.fsback / .fspback) includes: all scheduled messages (text, media, settings), all recurring messages, media storage items and boxes, channel connections and settings, bot tokens and assignments,
 help.backup.faq.5.q ||| What's included in a full backup?
-help.backup.faq.6.a ||| <b>.fsback</b> is a standard full backup (no password). <b>.fspback</b> is a password-protected backup with encryption (Premium only). Both contain the same data, but .fspback requires a password to restore. To create a 
+help.backup.faq.6.a ||| <b>.fsback</b> is a Fast Scheduler Backup (unencrypted, integrity-checked). <b>.fspback</b> is a Fast Scheduler Protected Backup — encrypted with a password you set (Premium only). Both hold the same data, but .fspback requires the password to restore. To create a .fspback: use <code>/backup</code> → choose Protected Backup → enter your password. Note: if your export includes sender bot tokens, the Protected Backup (.fspback) is chosen automatically.
 help.backup.faq.6.q ||| What's the difference between .fsback and .fspback?
 help.calendar.faq.1.a ||| Use Message List for a full list view instead of the calendar.
 help.calendar.faq.1.links ||| message_list,timezone,scheduling

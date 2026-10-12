@@ -542,7 +542,7 @@ _b('qa_what_is_fast_scheduler',
        "leaderboards of your top posts.</li>"
        "<li><b>Team features</b> — admin permissions, shared channel limits, "
        "ownership transfer with confirmation phrases.</li>"
-       "<li><b>Backups &amp; export</b> — encrypted .fspback backups, JSON/CSV "
+       "<li><b>Backups &amp; export</b> — encrypted .fspback (Fast Scheduler Protected Backup) backups, JSON/CSV "
        "exports, migration between accounts.</li>"
        "</ul>"
        "<h3>Free vs Premium, honestly</h3>"
