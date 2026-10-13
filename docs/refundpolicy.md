@@ -18,12 +18,14 @@ Because Telegram Stars purchases are governed by Telegram's own policies, refund
 
 ---
 
-## 3. Discretionary Refunds
+## 3. Discretionary Refunds — 7-Day Per-Payment Window
 
 We **do not** refund Telegram Stars purchases as a rule — Stars transactions are final under Telegram's policies. Outside mandatory consumer rights, we may grant a refund at our sole discretion where, for example:
 - You were charged twice for the same subscription period;
 - A technical fault on our side prevented you from using the Service you paid for; or
 - We terminated your access without cause.
+
+**Refund window (exact rule):** each Stars payment has its own **7-day** refund window counted from the **date of that specific payment**. Eligibility is evaluated **per payment, not per user or per month** — for example, if month 1 was used normally and month 2 auto-renewed by accident, only the month 2 payment can be refunded (and only if it is still within 7 days of the month 2 charge). **After 7 days from a payment, that payment is not refundable, even if premium was unused.** Exception: a technical failure on our side (paid but premium was not activated, double charge) may be approved manually as an admin override.
 
 Discretionary refunds are evaluated case by case, and only where Telegram's platform permits a reversal. Granting a refund in one case does not create a precedent.
 

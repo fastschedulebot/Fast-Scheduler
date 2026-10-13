@@ -80,7 +80,7 @@ _b('qa_private_channel_connect',
 _b('qa_refund_how',
    category='premium',
    title='How Do I Get a Refund on My Fast Scheduler Premium Purchase?',
-   description='Paid with Telegram Stars and changed your mind? Here is exactly how to request a refund: the email, what to include, the 30-day window and processing times.',
+   description='Paid with Telegram Stars and changed your mind? Here is exactly how to request a refund: the email, what to include, the 7-day per-payment window and processing times.',
    content=(
        "<p>Refunds are handled personally, not by a faceless form. If a purchase went "
        "wrong — a double charge, an accidental renewal, Premium that never activated — "
@@ -96,9 +96,12 @@ _b('qa_refund_how',
        "<li>The <b>reason</b> — one honest sentence is enough, plus the purchase date "
        "and the account or email used, where applicable.</li>"
        "</ul>"
-       "<h3>The 30-day window and what happens next</h3>"
-       "<p>Refund requests are accepted within <b>30 days</b> of the charge. Requests "
-       "are acknowledged within <b>7 business days</b>, and approved refunds are "
+       "<h3>The 7-day per-payment window and what happens next</h3>"
+       "<p>Each Stars payment has its own <b>7-day</b> refund window counted from "
+       "the date of that specific payment — eligibility is evaluated <b>per payment, "
+       "not per user or per month</b>. After 7 days from a payment, that payment is "
+       "not refundable, except for a technical failure on our side (approved manually). "
+       "Requests are acknowledged within <b>7 business days</b>, and approved refunds are "
        "returned through the original payment method — for Telegram Stars that means "
        "back to your Stars balance. Refunds are discretionary rather than guaranteed "
        "for every situation, which is exactly why a short, honest reason helps: "
