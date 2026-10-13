@@ -47,7 +47,7 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Fast Scheduler", "item": "https://fastschedulebot.github.io/Fast-Scheduler/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://fastschedulebot.github.io/Fast-Scheduler/blog/"}]}</script>
 <link rel="preload" href="../fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="../styles/main.css?v=20261013m1">
+<link rel="stylesheet" href="../styles/main.css?v=20261013m3">
 <link rel="stylesheet" href="../styles/hotkeys-modal.css?v=20261013m1">
 <style>
     /* ===== Blog layout (uses main.css tokens + header/footer as-is) ===== */
@@ -90,9 +90,8 @@
     .blog-art-kicker svg { width: 14px; height: 14px; }
     .blog-author { display: flex; align-items: center; gap: 12px; margin: 16px 0 4px;
       padding: 12px 0 18px; border-bottom: 1px solid var(--border); }
-    .blog-ava { width: 40px; height: 40px; flex: none; border-radius: 50%; display: grid;
-      place-items: center; font-weight: 850; font-size: .95rem; color: #fff;
-      background: linear-gradient(135deg, var(--green), var(--green-strong)); }
+    .blog-ava { width: 40px; height: 40px; flex: none; border-radius: 50%; object-fit: cover;
+      background: var(--surface-2); }
     .blog-author b { display: block; font-size: .92rem; }
     .blog-author small { display: block; color: var(--text-dim); font-size: .8rem; margin-top: 1px; }
     .blog-doc-cover { margin: 16px 0 4px; border-radius: 14px; overflow: hidden;
@@ -639,7 +638,7 @@
 <script src="../scripts/help-search.js?v=20261013m1"></script>
 <script src="../scripts/hotkeys-modal.js?v=20261013m1"></script>
 <script src="../scripts/hotkeys.js?v=20261013m1"></script>
-<script src="../scripts/scroll-jump.js?v=20261013m1"></script>
+<script src="../scripts/scroll-jump.js?v=20261013m2"></script>
 <script src="blog-search.js?v=20261005a1"></script><script src="../scripts/help-ai.js?v=20261013m1"></script><script src="../scripts/blog-hub.js?v=20261005a1"></script>
 </body>
 </html>

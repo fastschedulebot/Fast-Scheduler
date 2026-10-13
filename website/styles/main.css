@@ -1665,3 +1665,13 @@ html[lang="ru"] .nav-unified .nav-center .hc-hsearch { width: min(240px, 100%); 
 /* Skip link: hidden until keyboard focus (a11y + agent/keyboard navigation). */
 .skip-link { position: absolute; left: 12px; top: -60px; z-index: 300; background: var(--green-strong, #0d5338); color: #fff !important; padding: 10px 16px; border-radius: 8px; font-weight: 700; text-decoration: none; transition: top .2s; }
 .skip-link:focus { top: 12px; }
+
+/* Jump menu: badges must never split (Shift+Enter stays whole), and the menu
+   gets a slightly wider floor so rows fit without wrapping or scrolling. */
+.jump-menu { min-width: min(272px, calc(100vw - 32px)); }
+.jump-menu .tab-kbd { white-space: nowrap; overflow-wrap: normal; }
+
+/* Current-section nav cleanup: hide the self-link button (Blog on blog pages,
+   Help Center on help pages). Footer/settings links are untouched. */
+body.blog header.site a.nav-link[href*="blog/index.html"] { display: none !important; }
+body.help header.site a.nav-link[href*="help.html"] { display: none !important; }

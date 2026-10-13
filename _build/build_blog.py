@@ -472,7 +472,7 @@ def page_shell(title_html, body, rel='..', extra_js='', body_cls='blog'):
 {title_html}
 <link rel="preload" href="{rel}/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="{rel}/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="{rel}/styles/main.css?v=20261006a1">
+<link rel="stylesheet" href="{rel}/styles/main.css?v=20261013m3">
 <link rel="stylesheet" href="{rel}/styles/hotkeys-modal.css?v=20261006a1">
 <style>{BLOG_CSS}
   </style>

@@ -128,7 +128,7 @@
       /* prefer above the FAB; if there is no room, drop it below instead */
       var top = r.top - mh - 10;
       if (top < 12) top = Math.min(r.bottom + 10, window.innerHeight - mh - 12);
-      menu.style.top = Math.max(12, top) + 'px';
+      menu.style.top = Math.max(12, top) + 'px'; menu.style.bottom = 'auto';
       var left = r.left + r.width / 2 - mw / 2;
       left = Math.max(12, Math.min(window.innerWidth - mw - 12, left));
       menu.style.left = left + 'px';

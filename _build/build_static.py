@@ -135,12 +135,12 @@ def page_shell(title_html, body, rel='../..'):
 <head>
 {NOFLASH}
 {title_html}
-<link rel="stylesheet" href="{rel}/styles/main.css?v=20261006a1">
+<link rel="stylesheet" href="{rel}/styles/main.css?v=20261013m3">
 <link rel="stylesheet" href="{rel}/styles/hotkeys-modal.css?v=20261006a1">
 <style>{HC_COMPONENT_CSS}
   </style>
 </head>
-<body>
+<body class="help">
 <header class="site">
   <div class="wrap nav">
     <a class="brand" href="{rel}/index.html" aria-label="Fast Scheduler — home"><span class="brand-mark">{bh.svg('calendar')}</span><span class="brand-full">Fast Scheduler</span></a>
@@ -477,7 +477,7 @@ def main():
     head404 = ('<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">'
                + sec_metas() + '<title>Page not found — Fast Scheduler</title>'
                + '<meta name="robots" content="noindex">'
-               + f'<link rel="stylesheet" href="/styles/main.css?v=20261006a1">'
+               + f'<link rel="stylesheet" href="/styles/main.css?v=20261013m3">'
                + f'<link rel="stylesheet" href="/styles/hotkeys-modal.css?v=20261006a1">')
     # full site header: settings menu + "See hotkeys" row so the hotkeys
     # viewer exists on every page, not just home/help/legal
