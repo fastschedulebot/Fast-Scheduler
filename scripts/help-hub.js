@@ -1002,7 +1002,7 @@
   function syncTocFab() {
     var view = document.querySelector('.view[data-view="article"]:not([hidden])');
     var fab = view && view.querySelector('[data-toc-fab]');
-    if (fab) fab.hidden = !view.querySelector('.hc-jump-pop a');
+    if (fab) fab.hidden = !view.querySelector('.hc-toc-list a');
   }
   document.addEventListener('viewchange', syncTocFab);
   setTimeout(syncTocFab, 60);

@@ -2042,7 +2042,7 @@ JS = r'''
   function syncTocFab() {
     var view = document.querySelector('.view[data-view="article"]:not([hidden])');
     var fab = view && view.querySelector('[data-toc-fab]');
-    if (fab) fab.hidden = !view.querySelector('.hc-jump-pop a');
+    if (fab) fab.hidden = !view.querySelector('.hc-toc-list a');
   }
   document.addEventListener('viewchange', syncTocFab);
   setTimeout(syncTocFab, 60);
@@ -2273,7 +2273,7 @@ def render_article(n, group, by_id, order_index):
         body = text_to_html(n['content']) if n['content'] else ''
     faq_html = render_faq(n['faq'], link_href, link_label)
 
-    # "Jump to a section" box: anchor every <h3> and link to it (TikTok-style).
+    # Anchor every <h3> so the "On this page" rail and Contents sheet can link to it.
     jump_secs = []
     seen_secs = set()
 
@@ -2290,20 +2290,8 @@ def render_article(n, group, by_id, order_index):
         body = re.sub(r'<h3>(.*?)</h3>', _h3_sub, body, flags=re.S)
     toc_list = ''
     if jump_secs:
-        parts = []
-        for sid, lbl in jump_secs[:6]:
-            parts.append(f'<a href="#/a/{esc(n["id"])}" data-jid="{sid}">{esc(lbl)}</a>')
-        jump_html = ('<div class="hc-jump">'
-                     '<div class="hc-jump-strip" tabindex="0" role="button" aria-label="Jump to a section">'
-                     + svg('menu') + '<span class="vtxt">Sections</span></div>'
-                     '<nav class="hc-jump-pop glass-pop" aria-label="Jump to a section">'
-                     '<div class="hc-jump-head">Jump to a section</div>'
-                     f'<div class="hc-jump-n">{"".join(parts)}</div>'
-                     '</nav></div>')
         toc_list = ''.join(f'<li><a href="#/a/{esc(n["id"])}" data-jid="{esc(sid)}" data-toc-link>{esc(lbl)}</a></li>'
                            for sid, lbl in jump_secs[:6])
-    else:
-        jump_html = ''
 
     related = []
     seen = set()
@@ -2360,7 +2348,6 @@ def render_article(n, group, by_id, order_index):
           {faq_html}
           {related_html}
         </article>
-        {jump_html}
         <button type="button" class="hc-toc-fab" data-toc-fab aria-label="Open contents" hidden>{svg('book')}<span>Contents</span></button>
         <div class="hc-toc-scrim" data-toc-scrim hidden></div>
         <div class="hc-toc-sheet" data-toc-sheet role="dialog" aria-modal="true" aria-label="Contents" hidden>
