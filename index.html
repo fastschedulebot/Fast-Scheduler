@@ -10,6 +10,7 @@
   <meta name="description" content="Fast Scheduler is a free Telegram bot that schedules, publishes and tracks your channel posts. Batch-schedule a week in one chat, post from your own bot.">
   <meta name="keywords" content="telegram scheduler, telegram channel bot, schedule telegram posts, telegram post scheduler, telegram scheduling bot, batch schedule telegram, telegram autopost, telegram bot for channels, scheduled posts telegram">
   <link rel="canonical" href="https://fastschedulebot.github.io/Fast-Scheduler/">
+  <link rel="describedby" href="https://fastschedulebot.github.io/Fast-Scheduler/llms.txt">
   <!-- No hreflang: Russian is currently a client-side translation of this same
        URL (?lang=ru never resolved to distinct content), so advertising it as
        an alternate only told Google two URLs were the same page. Real
@@ -93,8 +94,9 @@
   </script>
   <link rel="preload" href="fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="styles/main.css?v=20261012b1">
-<link rel="stylesheet" href="styles/liquid-nav.css?v=20261005d1">
+<link rel="stylesheet" href="styles/main.css?v=20261013m1">
+<link rel="preload" href="styles/liquid-nav.css?v=20261013m1" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="stylesheet" href="styles/liquid-nav.css?v=20261013m1" media="print" onload="this.media='all'">
   <style>
     :root {
       --glass: color-mix(in srgb, var(--surface) 55%, transparent);
@@ -463,6 +465,13 @@
     .ribbon { align-self: flex-start; font-size: .76rem; font-weight: 750; letter-spacing: 0;
       color: #3f2d00; background: #eab308; padding: 5px 12px; border-radius: 999px; margin-bottom: 10px; }
     .plan-g .btn { margin-top: auto; }
+    /* Contrast hardening (Lighthouse a11y): every fully-visible control
+       meets 4.5:1. Dimmed coverflow siblings keep their preview look —
+       they are aria-hidden + inert (see layout()), not meant to be read. */
+    .billing-switch button { color: var(--text); }
+    .billing-switch button.active .rec { background: rgba(0, 0, 0, .35); color: #fff; }
+    .plan-g li.mute { color: var(--text); opacity: .8; }
+    .home-foot a { color: var(--text); }
 
     /* FAQ */
     .faq-glass { max-width: 780px; margin: 0 auto; padding: 10px 26px; }
@@ -999,18 +1008,20 @@
   </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Fast Scheduler", "url": "https://fastschedulebot.github.io/Fast-Scheduler/", "logo": "https://fastschedulebot.github.io/Fast-Scheduler/og-cover-v2.png", "description": "Telegram bot that schedules and auto-publishes channel posts: batch scheduling, recurring messages, sender bots, statistics and backups.", "sameAs": ["https://t.me/FastSchedulerBot"], "contactPoint": {"@type": "ContactPoint", "contactType": "customer support", "email": "fastschedulebot@gmail.com"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "Fast Scheduler", "alternateName": "Fast Scheduler Telegram bot", "url": "https://fastschedulebot.github.io/Fast-Scheduler/", "potentialAction": {"@type": "SearchAction", "target": {"@type": "EntryPoint", "urlTemplate": "https://fastschedulebot.github.io/Fast-Scheduler/help.html?q={search_term_string}"}, "query-input": "required name=search_term_string"}}</script>
-<link rel="stylesheet" href="styles/hero-cinema.css?v=20261006a2">
-<link rel="stylesheet" href="styles/hotkeys-modal.css?v=20261006a1">
-<link rel="stylesheet" href="styles/mobile-fix.css?v=20261001b1">
+<link rel="stylesheet" href="styles/hero-cinema.css?v=20261013m1" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="styles/hotkeys-modal.css?v=20261013m1" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="styles/mobile-fix.css?v=20261013m1" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="styles/liquid-nav.css?v=20261013m1"><link rel="stylesheet" href="styles/hero-cinema.css?v=20261013m1"><link rel="stylesheet" href="styles/hotkeys-modal.css?v=20261013m1"><link rel="stylesheet" href="styles/mobile-fix.css?v=20261013m1"></noscript>
 <!--fs:ru-alt-->
 <link rel="alternate" hreflang="ru" href="https://fastschedulebot.github.io/Fast-Scheduler/ru/">
 <link rel="alternate" hreflang="en" href="https://fastschedulebot.github.io/Fast-Scheduler/">
 <link rel="alternate" hreflang="x-default" href="https://fastschedulebot.github.io/Fast-Scheduler/">
 <!--/fs:ru-alt--></head>
 <body class="home">
+  <a class="skip-link" href="#main">Skip to main content</a>
   <nav class="home-nav" aria-label="Main">
     <span class="brand">
-      <span class="logo-dot" aria-hidden="true"><img src="brand-logo.png" alt="" width="44" height="44" decoding="async"></span>
+      <span class="logo-dot" aria-hidden="true"><img src="brand-logo-64.png" alt="" width="30" height="30" fetchpriority="high" decoding="async"></span>
       <span class="brand-full">Fast Scheduler</span><span class="brand-short" aria-hidden="true">FS</span>
     </span>
     <nav aria-label="Sections">
@@ -1030,7 +1041,7 @@
       <span class="settings-wrap">
         <button class="icon-btn" id="settingsBtn" aria-haspopup="menu" aria-expanded="false" aria-label="Settings" data-hk="settings dark anim fx keys"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33h0a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51h0a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82v0a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></button>
         <div class="glass-pop glass-pop-solid" id="settingsMenu" role="menu" aria-label="Settings">
-          <div class="gp-head">Settings</div>
+          <div class="gp-head" role="presentation">Settings</div>
           <button type="button" class="gp-row" role="menuitemcheckbox" aria-checked="false" id="rowDark">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><span>Dark mode</span><span class="io-switch" aria-hidden="true"></span>
           </button>
@@ -1041,7 +1052,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.8a2 2 0 0 0 1.3 1.3L21 12l-5.8 1.9a2 2 0 0 0-1.3 1.3L12 21l-1.9-5.8a2 2 0 0 0-1.3-1.3L3 12l5.8-1.9a2 2 0 0 0 1.3-1.3z"/></svg><span>Effects</span><span class="io-switch" aria-hidden="true"></span>
           </button>
           <button type="button" class="gp-row" role="menuitemcheckbox" aria-checked="true" id="rowKeys"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2.5"/><path d="M6.5 10h.01M10.5 10h.01M14.5 10h.01M18 10h.01M8 13.5h8"/></svg><span>Hotkeys</span><span class="io-switch" aria-hidden="true"></span></button>
-          <div class="gp-row gp-fonts" data-fonts><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg><span>Font size</span><span class="hc-fonts"><button type="button" data-font="s" aria-label="Small">A</button><button type="button" data-font="m" aria-label="Default">A</button><button type="button" data-font="l" aria-label="Large">A</button></span></div>
+          <div class="gp-row gp-fonts" data-fonts role="group" aria-label="Font size"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg><span>Font size</span><span class="hc-fonts"><button type="button" data-font="s" aria-label="Small" role="menuitemradio" aria-checked="false">A</button><button type="button" data-font="m" aria-label="Default" role="menuitemradio" aria-checked="true">A</button><button type="button" data-font="l" aria-label="Large" role="menuitemradio" aria-checked="false">A</button></span></div>
           <button type="button" class="gp-row gp-row-sub" id="rowKeysHelp" role="menuitem"><svg viewBox="0 0 24 24" fill="none" stroke="none" aria-hidden="true" style="visibility:hidden;width:18px;height:18px"></svg><span class="gp-sub-label">See hotkeys</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></button>
           <div class="gp-sep" role="separator"></div>
 
@@ -1066,7 +1077,7 @@
     </div>
   </nav>
 
-<div class="wrap">
+<main class="wrap" id="main">
   <!-- ============ HERO ============ -->
   <section class="hero" id="heroSec">
     <div class="hero-copy">
@@ -1090,10 +1101,10 @@
     </div>
 
     <!-- shown in cinema/finale mode, when the regular hero copy fades out -->
-    <div class="hero-finale-head" aria-hidden="true">
+    <div class="hero-finale-head" id="finaleHead" aria-hidden="true" inert>
       <h2>Scheduled in one chat. <span class="grad">Posted forever.</span></h2>
       <p>Fast Scheduler delivered this post at 18:15 sharp — while its owner was away. Your channel can run like this too.</p>
-      <a class="cta-big finale-cta" href="https://t.me/FastSchedulerBot?start=start__website_finale" target="_blank" rel="noopener noreferrer">
+      <a class="cta-big finale-cta" href="https://t.me/FastSchedulerBot?start=start__website_finale" target="_blank" rel="noopener noreferrer" tabindex="-1">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4z"/></svg>
         Start free — it takes 60 seconds
       </a>
@@ -1128,12 +1139,12 @@
               <svg class="tg-mic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0014 0M12 19v3"/></svg>
             </div>
             <!-- floating file-explorer overlay (photo upload scene) -->
-            <div class="tg-explorer" id="tgExplorer" aria-hidden="true">
+            <div class="tg-explorer" id="tgExplorer" aria-hidden="true" inert>
               <div class="fx-bar"><span class="fx-dot"></span>Downloads<span class="fx-min">—</span><span class="fx-min">▢</span><span class="fx-min">✕</span></div>
               <div class="fx-list" id="fxList"></div>
               <div class="fx-actions">
-                <button type="button" class="fx-btn fx-open" id="fxOpen">Open</button>
-                <button type="button" class="fx-btn fx-cancel">Cancel</button>
+                <button type="button" class="fx-btn fx-open" id="fxOpen" tabindex="-1">Open</button>
+                <button type="button" class="fx-btn fx-cancel" tabindex="-1">Cancel</button>
               </div>
             </div>
             <svg class="fx-cursor" id="fxCursor" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 2l13.5 8.2-6.2 1.2 3.4 7.2-2.7 1.3-3.4-7.3L5 16.8V2z" fill="#fff" stroke="#1a1a1a" stroke-width="1.1"/></svg>
@@ -1345,7 +1356,7 @@
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg> Leaderboards + custom auto reports</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg> Encrypted backup &amp; export</li>
         </ul>
-        <a class="btn btn-ghost btn-block" href="https://t.me/FastSchedulerBot?start=premium_monthly__pricing" target="_blank" rel="noopener noreferrer">Choose plan</a>
+        <a class="btn btn-ghost btn-block" href="https://t.me/FastSchedulerBot?start=premium_monthly__pricing" target="_blank" rel="noopener noreferrer" aria-label="Choose the 1 Month plan">Choose plan</a>
       </div>
       <div class="glass plan-g reveal" data-plan="monthly_3">
         <span class="ribbon">−10%</span>
@@ -1356,7 +1367,7 @@
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg> (breaks down to ≈ $6.15/mo)</li>
           <li class="mute">vs $20.49 if paid monthly</li>
         </ul>
-        <a class="btn btn-ghost btn-block" href="https://t.me/FastSchedulerBot?start=premium_monthly_3__pricing" target="_blank" rel="noopener noreferrer">Choose plan</a>
+        <a class="btn btn-ghost btn-block" href="https://t.me/FastSchedulerBot?start=premium_monthly_3__pricing" target="_blank" rel="noopener noreferrer" aria-label="Choose the 3 Months plan">Choose plan</a>
       </div>
       <div class="glass plan-g reveal" data-plan="monthly_6">
         <span class="ribbon">−13%</span>
@@ -1367,7 +1378,7 @@
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg> (breaks down to ≈ $5.94/mo)</li>
           <li class="mute">vs $40.98 if paid monthly</li>
         </ul>
-        <a class="btn btn-primary btn-block" href="https://t.me/FastSchedulerBot?start=premium_monthly_6__pricing" target="_blank" rel="noopener noreferrer">Choose plan</a>
+        <a class="btn btn-primary btn-block" href="https://t.me/FastSchedulerBot?start=premium_monthly_6__pricing" target="_blank" rel="noopener noreferrer" aria-label="Choose the 6 Months plan">Choose plan</a>
       </div>
       <div class="glass plan-g best reveal" data-plan="yearly">
         <span class="ribbon">Best value −17%</span>
@@ -1378,7 +1389,7 @@
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg> (breaks down to ≈ $5.67/mo)</li>
           <li class="mute">vs $81.96 if paid monthly</li>
         </ul>
-        <a class="btn btn-primary btn-block" href="https://t.me/FastSchedulerBot?start=premium_yearly__pricing" target="_blank" rel="noopener noreferrer">Choose plan</a>
+        <a class="btn btn-primary btn-block" href="https://t.me/FastSchedulerBot?start=premium_yearly__pricing" target="_blank" rel="noopener noreferrer" aria-label="Choose the 1 Year plan">Choose plan</a>
       </div>
     </div>
     </div><!-- /pricing-carousel -->
@@ -1478,9 +1489,17 @@
         if (off < -n / 2) off += n;
         el.setAttribute('data-pos', String(off));
         el.classList.toggle('active-plan', off === 0);
-        /* Grid layout: every card is visible and reachable, so none of them
-           may be hidden from assistive tech. */
-        el.removeAttribute('aria-hidden');
+        /* Coverflow: off-center cards are dimmed previews behind the
+           centered one (their CTAs are already pointer-events:none on
+           desktop). Hide them from assistive tech and keyboard tab order
+           so SR users don't wade through four half-visible duplicates. */
+        if (off === 0) {
+          el.removeAttribute('aria-hidden');
+          el.removeAttribute('inert');
+        } else {
+          el.setAttribute('aria-hidden', 'true');
+          el.setAttribute('inert', '');
+        }
       });
     }
 
@@ -1577,7 +1596,7 @@
       <span class="copy">© 2026 Fast Scheduler · Made for Telegram channels</span>
     </div>
   </footer>
-</div>
+</main>
 
 <script>
   (function () {
@@ -1601,12 +1620,12 @@
     }
   })();
 </script>
-<script src="scripts/theme.js?v=20260930a1"></script>
-<script defer src="scripts/nav-hide.js?v=20260930a2"></script>
-<script defer src="scripts/settings.js?v=20261005d1"></script>
-  <script defer src="scripts/ru-chrome.js?v=20261010a2"></script><script defer src="scripts/lang.js?v=20261010a2"></script>
-<script defer src="scripts/hotkeys.js?v=20261006a1"></script>
-<script defer src="scripts/scroll-jump.js?v=20261006a1"></script>
+<script defer src="scripts/theme.js?v=20261013m1"></script>
+<script defer src="scripts/nav-hide.js?v=20261013m1"></script>
+<script defer src="scripts/settings.js?v=20261013m1"></script>
+  <script defer src="scripts/ru-chrome.js?v=20261013m1"></script><script defer src="scripts/lang.js?v=20261013m1"></script>
+<script defer src="scripts/hotkeys.js?v=20261013m1"></script>
+<script defer src="scripts/scroll-jump.js?v=20261013m1"></script>
 <script>
   /* burger menu + navbar scroll elevation */
   (function () {
@@ -1644,9 +1663,9 @@
     }
   })();
 </script>
-<script defer src="scripts/liquid-nav.js?v=20261006a1"></script>
-<script defer src="scripts/help-search.js?v=20260930a1"></script>
-<script defer src="scripts/hotkeys-modal.js?v=20261006a1"></script>
+<script defer src="scripts/liquid-nav.js?v=20261013m1"></script>
+<script defer src="scripts/help-search.js?v=20261013m1"></script>
+<script defer src="scripts/hotkeys-modal.js?v=20261013m1"></script>
 <script>
   (function () {
     var root = document.documentElement;
@@ -1712,8 +1731,8 @@
   })();
 </script>
 
-<script defer src="scripts/site-config.js?v=20261009a1"></script>
-<script defer src="scripts/main.js?v=20261007a1"></script>
-<script defer src="scripts/hero-demo.js?v=20261006a2"></script>
+<script defer src="scripts/site-config.js?v=20261013m1"></script>
+<script defer src="scripts/main.js?v=20261013m1"></script>
+<script defer src="scripts/hero-demo.js?v=20261013m1"></script>
 </body>
 </html>

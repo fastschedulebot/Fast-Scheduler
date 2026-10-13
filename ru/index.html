@@ -10,6 +10,7 @@
   <meta name="description" content="Fast Scheduler — бесплатный Telegram-бот: планирование и публикация постов канала, аналитика. Планируйте неделю контента в одном чате и публикуйте от своего бота.">
   <meta name="keywords" content="telegram scheduler, telegram channel bot, schedule telegram posts, telegram post scheduler, telegram scheduling bot, batch schedule telegram, telegram autopost, telegram bot for channels, scheduled posts telegram">
   <link rel="canonical" href="https://fastschedulebot.github.io/Fast-Scheduler/ru/">
+  <link rel="describedby" href="https://fastschedulebot.github.io/Fast-Scheduler/llms.txt">
   <!-- No hreflang: Russian is currently a client-side translation of this same
        URL (?lang=ru never resolved to distinct content), so advertising it as
        an alternate only told Google two URLs were the same page. Real
@@ -93,8 +94,8 @@
   </script>
   <link rel="preload" href="../fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="../fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="../styles/main.css?v=20261012b1">
-<link rel="stylesheet" href="../styles/liquid-nav.css?v=20261005d1">
+<link rel="stylesheet" href="../styles/main.css?v=20261013m1">
+<link rel="stylesheet" href="../styles/liquid-nav.css?v=20261013m1">
   <style>
     :root {
       --glass: color-mix(in srgb, var(--surface) 55%, transparent);
@@ -999,9 +1000,9 @@
   </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Fast Scheduler", "url": "https://fastschedulebot.github.io/Fast-Scheduler/", "logo": "https://fastschedulebot.github.io/Fast-Scheduler/og-cover-v2.png", "description": "Telegram bot that schedules and auto-publishes channel posts: batch scheduling, recurring messages, sender bots, statistics and backups.", "sameAs": ["https://t.me/FastSchedulerBot"], "contactPoint": {"@type": "ContactPoint", "contactType": "customer support", "email": "fastschedulebot@gmail.com"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "Fast Scheduler", "alternateName": "Fast Scheduler Telegram bot", "url": "https://fastschedulebot.github.io/Fast-Scheduler/", "potentialAction": {"@type": "SearchAction", "target": {"@type": "EntryPoint", "urlTemplate": "https://fastschedulebot.github.io/Fast-Scheduler/help.html?q={search_term_string}"}, "query-input": "required name=search_term_string"}}</script>
-<link rel="stylesheet" href="../styles/hero-cinema.css?v=20261006a2">
-<link rel="stylesheet" href="../styles/hotkeys-modal.css?v=20261006a1">
-<link rel="stylesheet" href="../styles/mobile-fix.css?v=20261001b1">
+<link rel="stylesheet" href="../styles/hero-cinema.css?v=20261013m1">
+<link rel="stylesheet" href="../styles/hotkeys-modal.css?v=20261013m1">
+<link rel="stylesheet" href="../styles/mobile-fix.css?v=20261013m1">
 <!--fs:ru-alt-->
 <link rel="alternate" hreflang="ru" href="https://fastschedulebot.github.io/Fast-Scheduler/ru/">
 <link rel="alternate" hreflang="en" href="https://fastschedulebot.github.io/Fast-Scheduler/">
@@ -1030,7 +1031,7 @@
       <span class="settings-wrap">
         <button class="icon-btn" id="settingsBtn" aria-haspopup="menu" aria-expanded="false" aria-label="Settings" data-hk="settings dark anim fx keys"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33h0a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51h0a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82v0a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></button>
         <div class="glass-pop glass-pop-solid" id="settingsMenu" role="menu" aria-label="Settings">
-          <div class="gp-head">Настройки</div>
+          <div class="gp-head" role="presentation">Настройки</div>
           <button type="button" class="gp-row" role="menuitemcheckbox" aria-checked="false" id="rowDark">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><span>Тёмная тема</span><span class="io-switch" aria-hidden="true"></span>
           </button>
@@ -1041,7 +1042,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.8a2 2 0 0 0 1.3 1.3L21 12l-5.8 1.9a2 2 0 0 0-1.3 1.3L12 21l-1.9-5.8a2 2 0 0 0-1.3-1.3L3 12l5.8-1.9a2 2 0 0 0 1.3-1.3z"/></svg><span>Эффекты</span><span class="io-switch" aria-hidden="true"></span>
           </button>
           <button type="button" class="gp-row" role="menuitemcheckbox" aria-checked="true" id="rowKeys"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2.5"/><path d="M6.5 10h.01M10.5 10h.01M14.5 10h.01M18 10h.01M8 13.5h8"/></svg><span>Горячие клавиши</span><span class="io-switch" aria-hidden="true"></span></button>
-          <div class="gp-row gp-fonts" data-fonts><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg><span>Размер шрифта</span><span class="hc-fonts"><button type="button" data-font="s" aria-label="Small">A</button><button type="button" data-font="m" aria-label="Default">A</button><button type="button" data-font="l" aria-label="Large">A</button></span></div>
+          <div class="gp-row gp-fonts" data-fonts role="group" aria-label="Font size"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg><span>Размер шрифта</span><span class="hc-fonts"><button type="button" data-font="s" aria-label="Small" role="menuitemradio" aria-checked="false">A</button><button type="button" data-font="m" aria-label="Default" role="menuitemradio" aria-checked="true">A</button><button type="button" data-font="l" aria-label="Large" role="menuitemradio" aria-checked="false">A</button></span></div>
           <button type="button" class="gp-row gp-row-sub" id="rowKeysHelp" role="menuitem"><svg viewBox="0 0 24 24" fill="none" stroke="none" aria-hidden="true" style="visibility:hidden;width:18px;height:18px"></svg><span class="gp-sub-label">Показать клавиши</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></button>
           <div class="gp-sep" role="separator"></div>
 
@@ -1090,10 +1091,10 @@
     </div>
 
     <!-- shown in cinema/finale mode, when the regular hero copy fades out -->
-    <div class="hero-finale-head" aria-hidden="true">
+    <div class="hero-finale-head" id="finaleHead" aria-hidden="true" inert>
       <h2>Запланировали в одном чате. <span class="grad">Публикуется всегда.</span></h2>
       <p>Fast Scheduler опубликовал этот пост ровно в 18:15 — пока владелец был офлайн. Ваш канал тоже так может.</p>
-      <a class="cta-big finale-cta" href="https://t.me/FastSchedulerBot?start=start__website_finale" target="_blank" rel="noopener noreferrer">
+      <a class="cta-big finale-cta" href="https://t.me/FastSchedulerBot?start=start__website_finale" target="_blank" rel="noopener noreferrer" tabindex="-1">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4z"/></svg>
         Начать бесплатно — это займёт 60 секунд
       </a>
@@ -1601,12 +1602,12 @@
     }
   })();
 </script>
-<script src="../scripts/theme.js?v=20260930a1"></script>
-<script defer src="../scripts/nav-hide.js?v=20260930a2"></script>
-<script defer src="../scripts/settings.js?v=20261005d1"></script>
-  <script defer src="../scripts/ru-chrome.js?v=20261010a2"></script><script defer src="../scripts/lang.js?v=20261010a2"></script>
-<script defer src="../scripts/hotkeys.js?v=20261006a1"></script>
-<script defer src="../scripts/scroll-jump.js?v=20261006a1"></script>
+<script src="../scripts/theme.js?v=20261013m1"></script>
+<script defer src="../scripts/nav-hide.js?v=20261013m1"></script>
+<script defer src="../scripts/settings.js?v=20261013m1"></script>
+  <script defer src="../scripts/ru-chrome.js?v=20261013m1"></script><script defer src="../scripts/lang.js?v=20261013m1"></script>
+<script defer src="../scripts/hotkeys.js?v=20261013m1"></script>
+<script defer src="../scripts/scroll-jump.js?v=20261013m1"></script>
 <script>
   /* burger menu + navbar scroll elevation */
   (function () {
@@ -1644,9 +1645,9 @@
     }
   })();
 </script>
-<script defer src="../scripts/liquid-nav.js?v=20261006a1"></script>
-<script defer src="../scripts/help-search.js?v=20260930a1"></script>
-<script defer src="../scripts/hotkeys-modal.js?v=20261006a1"></script>
+<script defer src="../scripts/liquid-nav.js?v=20261013m1"></script>
+<script defer src="../scripts/help-search.js?v=20261013m1"></script>
+<script defer src="../scripts/hotkeys-modal.js?v=20261013m1"></script>
 <script>
   (function () {
     var root = document.documentElement;
@@ -1712,8 +1713,8 @@
   })();
 </script>
 
-<script defer src="../scripts/site-config.js?v=20261009a1"></script>
-<script defer src="../scripts/main.js?v=20261007a1"></script>
-<script defer src="../scripts/hero-demo.js?v=20261006a2"></script>
+<script defer src="../scripts/site-config.js?v=20261013m1"></script>
+<script defer src="../scripts/main.js?v=20261013m1"></script>
+<script defer src="../scripts/hero-demo.js?v=20261013m1"></script>
 </body>
 </html>

@@ -1661,3 +1661,7 @@ html[lang="ru"] .nav-unified .nav-center .hc-hsearch { width: min(240px, 100%); 
   html[lang="ru"] .nav-unified .nav-link { padding: 0 11px; height: 40px; }
   html[lang="ru"] .nav-unified .nav-center .hc-hsearch { width: min(200px, 100%); }
 }
+
+/* Skip link: hidden until keyboard focus (a11y + agent/keyboard navigation). */
+.skip-link { position: absolute; left: 12px; top: -60px; z-index: 300; background: var(--green-strong, #0d5338); color: #fff !important; padding: 10px 16px; border-radius: 8px; font-weight: 700; text-decoration: none; transition: top .2s; }
+.skip-link:focus { top: 12px; }

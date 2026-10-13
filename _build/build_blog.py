@@ -391,6 +391,7 @@ def page_head(title, desc, canonical, extra_ld='', og_type='article'):
 <meta name="description" content="{bh.esc(desc)}">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <link rel="canonical" href="{canonical}">
+<link rel="describedby" href="https://fastschedulebot.github.io/Fast-Scheduler/llms.txt">
 <meta property="og:type" content="{og_type}">
 <meta property="og:site_name" content="Fast Scheduler">
 <meta property="og:title" content="{bh.esc(title)}">
@@ -477,8 +478,9 @@ def page_shell(title_html, body, rel='..', extra_js='', body_cls='blog'):
   </style>
 </head>
 <body class="{body_cls}">
+<a class="skip-link" href="#main">Skip to main content</a>
 {header(rel)}
-<main class="legal">
+<main class="legal" id="main">
 {body}
 </main>
 {footer(rel)}
@@ -771,7 +773,7 @@ def card_html(a, size, minutes):
     hay = bh.esc((a['title'] + ' ' + a['description'] + ' ' +
                   strip_html(a['content'])).lower())
     return (f'<a class="bcard s-{size}" href="a/{bh.esc(a["id"])}.html" data-search="{hay}">'
-            f'<span class="bcard-cover"><img src="{bh.esc(cover_url(a))}" alt="" '
+            f'<span class="bcard-cover"><img src="{bh.esc(cover_url(a))}" alt="{bh.esc(a["title"])}" '
             f'width="900" height="506" loading="lazy"></span>'
             f'<span class="bcard-body"><b>{bh.esc(a["title"])}</b>'
             f'<span class="bcard-desc">{bh.esc(desc)}</span>'
@@ -1086,7 +1088,7 @@ def build_articles():
     <article class="blog-doc">
       <h1>{bh.esc(art['title'])}</h1>
       <p class="blog-byline">{cat["title"]} · {fmt_date(art["date"])} · {mins} min read · Fast Scheduler team</p>
-      <figure class="blog-doc-cover"><img src="../img/{art['id']}.jpg" alt="" width="1200" height="675" loading="eager" onerror="this.parentNode.style.display='none'"></figure>
+      <figure class="blog-doc-cover"><img src="../img/{art['id']}.jpg" alt="{bh.esc(art['title'])}" width="1200" height="675" loading="eager" onerror="this.parentNode.style.display='none'"></figure>
       <div class="hc-body">{content}</div>
       {('<div class="hc-faq"><h2>Common questions</h2>' + ''.join(
           f'<details><summary>{bh.esc_q(f["q"])}</summary><div class="hc-fa"><p>{bh.esc(f["a"])}</p></div></details>'

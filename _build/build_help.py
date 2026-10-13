@@ -1886,7 +1886,7 @@ JS = r'''
           '<b>' + markText(top.sec.t, norm(q)) + '</b>' +
           '<span class="hc-best-cat">' + escapeHtml(CATS[top.sec.c] || '') + '</span>' +
           '<p>' + markText(snippet(top.sec.b, norm(q)), norm(q)) + '</p></a>';
-        if (rest.length) html += '<div class="hc-sempty-h" style="max-width:760px;margin:0 auto 6px;font-size:.8rem;font-weight:700;color:var(--text-dim)">All results</div>';
+        if (rest.length) html += '<div class="hc-sempty-h" style="width:100%;max-width:760px;margin:0 auto 6px;text-align:left;grid-column:1/-1;font-size:.8rem;font-weight:700;color:var(--text-dim)">All results</div>';
         html += rest.map(function (x) { return resultRow(x.sec, norm(q)); }).join('');
       } else {
         html = hits.map(function (x) { return resultRow(x.sec, norm(q)); }).join('');
@@ -2456,6 +2456,7 @@ def build_page(nodes, help_sec):
   <meta name="description" content="Searchable help center for Fast Scheduler: scheduling, recurring posts, sender bots, channels, statistics, premium and payments. {len(article_order)} answers, instantly searchable.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://fastschedulebot.github.io/Fast-Scheduler/help.html">
+  <link rel="describedby" href="https://fastschedulebot.github.io/Fast-Scheduler/llms.txt">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Help Center — Fast Scheduler for Telegram">
   <meta property="og:description" content="{len(article_order)} searchable help topics for the Fast Scheduler Telegram bot.">
@@ -2500,6 +2501,7 @@ def build_page(nodes, help_sec):
   </style>
 </head>
 <body>
+  <a class="skip-link" href="#helpApp">Skip to main content</a>
 <header class="site">
   <div class="wrap nav">
       <button class="icon-btn hc-menu-btn" id="hcMenuBtn" aria-label="Open navigation" aria-controls="hcSideNav">{svg('menu')}</button>

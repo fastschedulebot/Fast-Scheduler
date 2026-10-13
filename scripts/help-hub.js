@@ -845,7 +845,7 @@
           '<b>' + markText(top.sec.t, norm(q)) + '</b>' +
           '<span class="hc-best-cat">' + escapeHtml(CATS[top.sec.c] || '') + '</span>' +
           '<p>' + markText(snippet(top.sec.b, norm(q)), norm(q)) + '</p></a>';
-        if (rest.length) html += '<div class="hc-sempty-h" style="max-width:760px;margin:0 auto 6px;font-size:.8rem;font-weight:700;color:var(--text-dim)">' + hcT('All results') + '</div>';
+        if (rest.length) html += '<div class="hc-sempty-h" style="width:100%;max-width:760px;margin:0 auto 6px;text-align:left;grid-column:1/-1;font-size:.8rem;font-weight:700;color:var(--text-dim)">' + hcT('All results') + '</div>';
         html += rest.map(function (x) { return resultRow(x.sec, norm(q)); }).join('');
       } else {
         html = hits.map(function (x) { return resultRow(x.sec, norm(q)); }).join('');

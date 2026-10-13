@@ -11,6 +11,7 @@
   <meta name="description" content="Searchable help center for Fast Scheduler: scheduling, recurring posts, sender bots, channels, statistics, premium and payments.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://fastschedulebot.github.io/Fast-Scheduler/help.html">
+  <link rel="describedby" href="https://fastschedulebot.github.io/Fast-Scheduler/llms.txt">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Help Center — Fast Scheduler for Telegram">
   <meta property="og:description" content="308 searchable help topics for the Fast Scheduler Telegram bot.">
@@ -62,9 +63,9 @@
   </script>
   <link rel="preload" href="fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="styles/main.css?v=20261010a1">
-  <link rel="stylesheet" href="styles/liquid-nav.css?v=20261007a1">
-<link rel="stylesheet" href="styles/hotkeys-modal.css?v=20261006a1">
+  <link rel="stylesheet" href="styles/main.css?v=20261013m1">
+  <link rel="stylesheet" href="styles/liquid-nav.css?v=20261013m1">
+<link rel="stylesheet" href="styles/hotkeys-modal.css?v=20261013m1">
   <style>
     :root { --hc-r: 18px; --hc-head: 64px; }
 
@@ -1222,10 +1223,340 @@
   </style>
 </head>
 <body>
+  <a class="skip-link" href="#helpApp">Skip to main content</a>
 <header class="site"><div class="wrap nav nav-unified"><div class="nav-group nav-left"><a class="brand" href="./index.html" aria-label="Fast Scheduler — home"><span class="brand-mark"><img src="./brand-logo.png" alt="" width="30" height="30" decoding="async"></span><span class="brand-full">Fast Scheduler</span><span class="brand-short">FS</span><span class="hc-brand-help">Help Center</span></a></div><div class="nav-center"><div class="hc-hsearch"><svg class="sic" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg><input id="hcSearchH" type="search" placeholder="Search articles" aria-label="Search help articles" autocomplete="off" aria-expanded="false" aria-controls="hcResultsH" enterkeyhint="search"><kbd>S</kbd><div class="hc-results" id="hcResultsH" role="listbox" aria-label="Search results" hidden></div></div></div><div class="nav-group nav-right"><a class="nav-link" href="./blog/index.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 11 18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg><span>Blog</span></a><span class="site-menu-wrap"><a class="nav-link site-menu-row" role="menuitem" href="./help.html" aria-haspopup="menu" aria-expanded="false"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg><span>Help Center</span></a><div class="glass-pop site-menu-pop help-menu nav-menu-pop" id="siteMenu" role="menu" aria-label="Help center quick search"><form class="help-search" id="helpSearchForm" role="search"><svg class="sic" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg><input type="search" id="helpSearchInput" placeholder="Search the help center…" autocomplete="off" aria-label="Search the help center"></form><div class="help-recent"><div class="help-recent-title" id="helpRecentTitle">Popular articles</div><div class="help-recent-list" id="helpRecentList"></div></div><a class="gp-row help-menu-open" role="menuitem" href="./help.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg><span>Open Help Center</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a></div></span><a class="btn btn-primary nav-cta" data-cta-short="Open" href="https://t.me/FastSchedulerSupport_bot?start=_t" target="_blank" rel="noopener noreferrer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg><span>Open Bot</span><kbd class="tab-kbd" aria-hidden="true">B</kbd></a><span class="settings-wrap"><button type="button" class="icon-btn" id="settingsBtn" aria-haspopup="menu" aria-expanded="false" aria-label="Settings" data-hk="settings dark anim fx keys"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33h0a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51h0a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82v0a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></button><div class="glass-pop" id="settingsMenu" role="menu" aria-label="Settings"><div class="gp-head">Settings</div><button type="button" class="gp-row" role="menuitemcheckbox" aria-checked="false" id="rowDark"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><span>Dark mode</span><span class="io-switch" aria-hidden="true"></span></button><button type="button" class="gp-row" role="menuitemcheckbox" aria-checked="true" id="rowAnim"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg><span>Animations</span><span class="io-switch" aria-hidden="true"></span></button><button type="button" class="gp-row" role="menuitemcheckbox" aria-checked="true" id="rowFx"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.9 5.8a2 2 0 0 0 1.3 1.3L21 12l-5.8 1.9a2 2 0 0 0-1.3 1.3L12 21l-1.9-5.8a2 2 0 0 0-1.3-1.3L3 12l5.8-1.9a2 2 0 0 0 1.3-1.3z"/></svg><span>Effects</span><span class="io-switch" aria-hidden="true"></span></button><button type="button" class="gp-row" role="menuitemcheckbox" aria-checked="true" id="rowKeys"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="6" width="20" height="12" rx="2.5"/><path d="M6.5 10h.01M10.5 10h.01M14.5 10h.01M18 10h.01M8 13.5h8"/></svg><span>Hotkeys</span><span class="io-switch" aria-hidden="true"></span></button><div class="gp-sep gp-reading" data-reading hidden></div><div class="gp-head gp-reading" data-reading hidden>Reading</div><button type="button" class="gp-row gp-reading" data-reading role="menuitemcheckbox" aria-checked="false" data-wide-toggle hidden><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3H5a2 2 0 0 0-2 2v3"/><path d="M16 3h3a2 2 0 0 1 2 2v3"/><path d="M8 21H5a2 2 0 0 1-2-2v-3"/><path d="M16 21h3a2 2 0 0 0 2-2v-3"/></svg><span>Wide format</span><span class="io-switch" aria-hidden="true"></span></button><button type="button" class="gp-row gp-reading" data-reading role="menuitemcheckbox" aria-checked="true" data-rail-toggle hidden><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg><span>Article navigation</span><span class="io-switch" aria-hidden="true"></span></button><div class="gp-row gp-fonts" data-fonts><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg><span>Font size</span><span class="hc-fonts"><button type="button" data-font="s" aria-label="Small">A</button><button type="button" data-font="m" aria-label="Default">A</button><button type="button" data-font="l" aria-label="Large">A</button></span></div><button type="button" class="gp-row gp-row-sub" id="rowKeysHelp" role="menuitem"><svg viewBox="0 0 24 24" fill="none" stroke="none" aria-hidden="true" style="visibility:hidden;width:18px;height:18px"></svg><span class="gp-sub-label">See hotkeys</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></button><div class="gp-sep" role="separator"></div><a class="gp-row" role="menuitem" href="https://t.me/FastSchedulerSupport_bot" target="_blank" rel="noopener noreferrer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg><span>Support chat</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a></div></span><button class="icon-btn hc-menu-btn" id="hcMenuBtn" aria-label="Open navigation" aria-controls="hcSideNav"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button></div></div></header>
   <div class="hc-progress" id="hcProgress"></div>
 
   <main class="help-main" id="helpApp">
+  <noscript>
+    <nav aria-label="All help articles">
+      <ul id="hcNoscriptList">
+      <li><a href="help/c/start.html">Getting Started — 21 Guides | Fast Scheduler</a></li>
+      <li><a href="help/c/scheduling.html">Scheduling Messages — 19 Guides | Fast Scheduler</a></li>
+      <li><a href="help/c/channels.html">Channels — 13 Guides | Fast Scheduler</a></li>
+      <li><a href="help/c/bots.html">Sender Bots — 13 Guides | Fast Scheduler</a></li>
+      <li><a href="help/c/admins.html">Admins — 4 Guides | Fast Scheduler</a></li>
+      <li><a href="help/c/premium.html">Premium — 33 Guides | Fast Scheduler</a></li>
+      <li><a href="help/c/referral.html">Referrals — 14 Guides | Fast Scheduler</a></li>
+      <li><a href="help/c/limits.html">Limits — 16 Guides | Fast Scheduler</a></li>
+      <li><a href="help/c/timezone.html">Time Zone — 5 Guides | Fast Scheduler</a></li>
+      <li><a href="help/c/language.html">Language — 4 Guides | Fast Scheduler</a></li>
+      <li><a href="help/c/export.html">Export — 9 Guides | Fast Scheduler</a></li>
+      <li><a href="help/c/import.html">Import — 7 Guides | Fast Scheduler</a></li>
+      <li><a href="help/c/backup.html">Backup — 13 Guides | Fast Scheduler</a></li>
+      <li><a href="help/c/media_storage.html">Media Storage — 17 Guides | Fast Scheduler</a></li>
+      <li><a href="help/c/tools.html">Tools — 9 Guides | Fast Scheduler</a></li>
+      <li><a href="help/c/tips.html">Pro Tips — 20 Guides | Fast Scheduler</a></li>
+      <li><a href="help/c/feedback.html">Feedback &amp;amp; Support — 11 Guides | Fast Scheduler</a></li>
+      <li><a href="help/c/faq.html">Frequently Asked Questions — 19 Guides | Fast Scheduler</a></li>
+      <li><a href="help/c/commands.html">Text Commands — 8 Guides | Fast Scheduler</a></li>
+      <li><a href="help/c/errors.html">Troubleshooting — 15 Guides | Fast Scheduler</a></li>
+      <li><a href="help/c/privacy.html">Privacy — 10 Guides | Fast Scheduler</a></li>
+      <li><a href="help/c/contact.html">Contact &amp;amp; Support — 7 Guides | Fast Scheduler</a></li>
+      <li><a href="help/c/config.html">Settings &amp;amp; Configuration — 3 Guides | Fast Scheduler</a></li>
+      <li><a href="help/c/misc.html">More topics — 9 Guides | Fast Scheduler</a></li>
+      <li><a href="help/a/start.html">Getting Started Overview</a></li>
+      <li><a href="help/a/getting_started.html">Getting Started</a></li>
+      <li><a href="help/a/connect_channel.html">Connecting a Channel</a></li>
+      <li><a href="help/a/connect_bot.html">Connecting a Bot</a></li>
+      <li><a href="help/a/onboarding_step1.html">Step 1: Link</a></li>
+      <li><a href="help/a/onboarding_step2.html">Step 2: Schedule</a></li>
+      <li><a href="help/a/start_account.html">Your Account</a></li>
+      <li><a href="help/a/start_schedule.html">Send Your First Post</a></li>
+      <li><a href="help/a/start_tips.html">Quick Tips</a></li>
+      <li><a href="help/a/glossary.html">Glossary</a></li>
+      <li><a href="help/a/glossary_channel.html">Channel: Getting Started</a></li>
+      <li><a href="help/a/glossary_sender.html">Sender Bot</a></li>
+      <li><a href="help/a/glossary_signature.html">Signature: Getting Started</a></li>
+      <li><a href="help/a/glossary_recurring.html">Recurring</a></li>
+      <li><a href="help/a/glossary_premium.html">Premium: Getting Started</a></li>
+      <li><a href="help/a/glossary_import.html">Import: Getting Started</a></li>
+      <li><a href="help/a/glossary_export.html">Export: Getting Started</a></li>
+      <li><a href="help/a/glossary_storage.html">Media Storage</a></li>
+      <li><a href="help/a/glossary_feedback.html">Feedback</a></li>
+      <li><a href="help/a/setdate.html">SetDate Integration</a></li>
+      <li><a href="help/a/advertising.html">Advertising &amp;amp; Promotion</a></li>
+      <li><a href="help/a/scheduling.html">Scheduling Messages Overview</a></li>
+      <li><a href="help/a/schedule_media.html">Photo &amp;amp; Video Posts</a></li>
+      <li><a href="help/a/schedule_poll.html">Polls: Scheduling Messages</a></li>
+      <li><a href="help/a/schedule_forward.html">Forwarding</a></li>
+      <li><a href="help/a/formatting.html">Formatting &amp;amp; Inline Buttons</a></li>
+      <li><a href="help/a/content_types.html">Supported Content Types (Free Plan)</a></li>
+      <li><a href="help/a/media_types.html">Media Selection Types</a></li>
+      <li><a href="help/a/edit.html">Edit Messages</a></li>
+      <li><a href="help/a/delete.html">Delete Messages</a></li>
+      <li><a href="help/a/recurring.html">Recurring Messages</a></li>
+      <li><a href="help/a/recurring_uses.html">How You Can Use Recurring Messages</a></li>
+      <li><a href="help/a/recurring_pause_resume.html">Pause &amp;amp; Resume</a></li>
+      <li><a href="help/a/multichannel.html">Multi-Channel Scheduling</a></li>
+      <li><a href="help/a/schedule_advanced.html">Advanced Scheduling: Edit, Delete</a></li>
+      <li><a href="help/a/qa_edit_scheduled_post.html">Can I Edit a Scheduled Post After</a></li>
+      <li><a href="help/a/qa_schedule_many_at_once.html">How to Schedule Many Telegram Posts at</a></li>
+      <li><a href="help/a/qa_recurring_guide.html">How to Automate Recurring Posts in</a></li>
+      <li><a href="help/a/qa_media_types.html">What Types of Content Can You Schedule</a></li>
+      <li><a href="help/a/qa_formatting.html">How Do I Format Telegram Posts? (Bold</a></li>
+      <li><a href="help/a/channels.html">Channels Overview</a></li>
+      <li><a href="help/a/channel_add.html">Add a Channel</a></li>
+      <li><a href="help/a/channel_connect.html">Connect the Bot</a></li>
+      <li><a href="help/a/channel_manage.html">Manage Channels</a></li>
+      <li><a href="help/a/channel_permissions.html">Channel Permissions</a></li>
+      <li><a href="help/a/channel_posting.html">How Posting Works: Sender Bots</a></li>
+      <li><a href="help/a/channel_link.html">Permanent Link</a></li>
+      <li><a href="help/a/channel_unlink.html">Unlink vs Delete</a></li>
+      <li><a href="help/a/channel_remove.html">Remove a Channel</a></li>
+      <li><a href="help/a/channel_signature.html">Signature: Channels</a></li>
+      <li><a href="help/a/channel_stats.html">Channel Stats</a></li>
+      <li><a href="help/a/qa_add_channel_guide.html">How to Connect a Telegram Channel to</a></li>
+      <li><a href="help/a/qa_private_channel_connect.html">How Do I Connect a Private Telegram</a></li>
+      <li><a href="help/a/bots.html">Sender Bots Overview</a></li>
+      <li><a href="help/a/bot_add.html">Add a Sender Bot</a></li>
+      <li><a href="help/a/bot_manage.html">Manage Sender Bots</a></li>
+      <li><a href="help/a/sender_bot_management.html">Sender Bot Management</a></li>
+      <li><a href="help/a/bot_permissions.html">Bot Permissions</a></li>
+      <li><a href="help/a/bot_sender.html">Posting as Your Bot</a></li>
+      <li><a href="help/a/bot_status.html">Bot Status</a></li>
+      <li><a href="help/a/bot_stats.html">Channel Stats &amp;amp; Leaderboards</a></li>
+      <li><a href="help/a/bot_rotate.html">Rotate Token</a></li>
+      <li><a href="help/a/bot_remove.html">Remove a Sender Bot</a></li>
+      <li><a href="help/a/bot_fleet.html">Bot Fleet</a></li>
+      <li><a href="help/a/qa_sender_bot_required.html">Do You Need a Sender Bot to Schedule</a></li>
+      <li><a href="help/a/qa_bot_management.html">How to Manage Your Sender Bots: Rotate</a></li>
+      <li><a href="help/a/admins.html">Admins Overview</a></li>
+      <li><a href="help/a/admins_limits.html">How Admins Share Limits</a></li>
+      <li><a href="help/a/admins_permissions.html">Permissions &amp;amp; Requests</a></li>
+      <li><a href="help/a/admins_transfer.html">Ownership Transfer</a></li>
+      <li><a href="help/a/premium.html">Premium Overview</a></li>
+      <li><a href="help/a/premium_features.html">Premium Features</a></li>
+      <li><a href="help/a/premium_compare.html">Compare Plans</a></li>
+      <li><a href="help/a/premium_buy.html">Buy Premium</a></li>
+      <li><a href="help/a/payment.html">Payments</a></li>
+      <li><a href="help/a/payment_stars.html">Telegram Stars</a></li>
+      <li><a href="help/a/payment_crypto.html">Crypto: Premium</a></li>
+      <li><a href="help/a/payment_currencies.html">Currencies</a></li>
+      <li><a href="help/a/payment_invoice_pay.html">Pay Invoice</a></li>
+      <li><a href="help/a/payment_confirm.html">Confirmation</a></li>
+      <li><a href="help/a/payment_status.html">Payment Status</a></li>
+      <li><a href="help/a/payment_promo_apply.html">Apply Promo</a></li>
+      <li><a href="help/a/payment_failed.html">Failed Payment</a></li>
+      <li><a href="help/a/premium_trial.html">Trial: Premium</a></li>
+      <li><a href="help/a/premium_welcome.html">Welcome to Premium</a></li>
+      <li><a href="help/a/promocode.html">Promo Codes</a></li>
+      <li><a href="help/a/premium_cancel.html">Cancel Premium</a></li>
+      <li><a href="help/a/premium_status.html">Premium Status</a></li>
+      <li><a href="help/a/premium_freeze.html">Frozen Assets</a></li>
+      <li><a href="help/a/premium_expiry.html">Premium Expiry</a></li>
+      <li><a href="help/a/premium_grace.html">Grace Period</a></li>
+      <li><a href="help/a/premium_renew.html">Renew: Premium</a></li>
+      <li><a href="help/a/premium_reactivate.html">Reactivate</a></li>
+      <li><a href="help/a/premium_refund.html">Refunds: Premium</a></li>
+      <li><a href="help/a/premium_troubleshooting.html">Premium Troubleshooting</a></li>
+      <li><a href="help/a/premium_activate.html">Premium Activation</a></li>
+      <li><a href="help/a/premium_welcome_bonus.html">Referral Bonus</a></li>
+      <li><a href="help/a/premium_invoice.html">Invoices</a></li>
+      <li><a href="help/a/premium_referral.html">Referral Program</a></li>
+      <li><a href="help/a/qa_premium_worth.html">Is Fast Scheduler Premium Worth It? An</a></li>
+      <li><a href="help/a/qa_pay_stars_crypto.html">How to Pay for Fast Scheduler Premium</a></li>
+      <li><a href="help/a/qa_which_plan.html">Free vs Premium: Which Fast Scheduler</a></li>
+      <li><a href="help/a/qa_refund_how.html">How Do I Get a Refund on My Fast</a></li>
+      <li><a href="help/a/referral.html">Referrals Overview</a></li>
+      <li><a href="help/a/referral_how.html">How Referrals Work</a></li>
+      <li><a href="help/a/referral_link.html">Your Link</a></li>
+      <li><a href="help/a/referral_share.html">Share: Referrals</a></li>
+      <li><a href="help/a/referral_rewards.html">Referral Rewards</a></li>
+      <li><a href="help/a/referral_activate.html">Activate Days</a></li>
+      <li><a href="help/a/referral_stats.html">Your Referral Stats</a></li>
+      <li><a href="help/a/referral_stats_detail.html">Detailed Stats</a></li>
+      <li><a href="help/a/referral_history.html">Referral History</a></li>
+      <li><a href="help/a/referral_rules.html">Rules: Referrals</a></li>
+      <li><a href="help/a/referral_fraud.html">Abuse: Referrals</a></li>
+      <li><a href="help/a/referral_verify.html">Why Verification Is Required</a></li>
+      <li><a href="help/a/referral_beta.html">Beta Program</a></li>
+      <li><a href="help/a/referral_credit.html">How Crediting Works</a></li>
+      <li><a href="help/a/limits.html">Limits Overview</a></li>
+      <li><a href="help/a/limits_free.html">Free Plan Limits</a></li>
+      <li><a href="help/a/limits_premium.html">Premium Plan Limits</a></li>
+      <li><a href="help/a/limit_daily.html">Monthly Send Limit</a></li>
+      <li><a href="help/a/limit_scheduled.html">Scheduled Limit</a></li>
+      <li><a href="help/a/limit_recurring.html">Recurring Limit</a></li>
+      <li><a href="help/a/limit_channels.html">Channel Limit</a></li>
+      <li><a href="help/a/limit_bots.html">Sender Bot Limit</a></li>
+      <li><a href="help/a/limit_media.html">Media Limit</a></li>
+      <li><a href="help/a/limit_storage_detail.html">Storage Limit</a></li>
+      <li><a href="help/a/limit_increase.html">Raise Limits</a></li>
+      <li><a href="help/a/limit_raise_channels.html">Raise Channels</a></li>
+      <li><a href="help/a/limit_raise_bots.html">Raise Bots</a></li>
+      <li><a href="help/a/limit_raise_daily.html">Raise Send Limits</a></li>
+      <li><a href="help/a/limit_raise_storage.html">Raise Storage</a></li>
+      <li><a href="help/a/qa_free_limits.html">What Do I Get With Fast Scheduler for</a></li>
+      <li><a href="help/a/timezone.html">Time Zone Overview</a></li>
+      <li><a href="help/a/timezone_set.html">Set Time Zone</a></li>
+      <li><a href="help/a/timezone_list.html">Supported Zones</a></li>
+      <li><a href="help/a/qa_timezones.html">Why Did My Post Go Out at the Wrong</a></li>
+      <li><a href="help/a/qa_timezone_wrong_time.html">Why Was My Scheduled Telegram Post</a></li>
+      <li><a href="help/a/language.html">Language Overview</a></li>
+      <li><a href="help/a/language_change.html">Change Language</a></li>
+      <li><a href="help/a/language_list.html">Languages</a></li>
+      <li><a href="help/a/language_add.html">Missing Language?</a></li>
+      <li><a href="help/a/export.html">Export Overview</a></li>
+      <li><a href="help/a/export_data.html">Export Data: Export</a></li>
+      <li><a href="help/a/export_chat.html">Export a Chat</a></li>
+      <li><a href="help/a/export_formats.html">Formats: Export</a></li>
+      <li><a href="help/a/export_text.html">Plain Text</a></li>
+      <li><a href="help/a/export_csv.html">CSV Export</a></li>
+      <li><a href="help/a/export_json.html">JSON Export</a></li>
+      <li><a href="help/a/export_rtf.html">RTF Export</a></li>
+      <li><a href="help/a/export_odt.html">ODT Export</a></li>
+      <li><a href="help/a/import.html">Import Overview</a></li>
+      <li><a href="help/a/import_data.html">Importing Your Data</a></li>
+      <li><a href="help/a/import_chat.html">Import a Chat</a></li>
+      <li><a href="help/a/import_from_storage.html">Import From Storage</a></li>
+      <li><a href="help/a/import_csv.html">CSV Import</a></li>
+      <li><a href="help/a/import_json.html">JSON Import</a></li>
+      <li><a href="help/a/import_formats.html">Supported Import Formats</a></li>
+      <li><a href="help/a/backup.html">Backup Overview</a></li>
+      <li><a href="help/a/backup_create.html">Create Backup</a></li>
+      <li><a href="help/a/backup_include.html">What Is Backed Up</a></li>
+      <li><a href="help/a/backup_exclude.html">What Is Excluded</a></li>
+      <li><a href="help/a/backup_password.html">Backup Password</a></li>
+      <li><a href="help/a/backup_size.html">Backup Size</a></li>
+      <li><a href="help/a/backup_schedule.html">Scheduled Backups</a></li>
+      <li><a href="help/a/backup_restore.html">Restore Backup</a></li>
+      <li><a href="help/a/backup_verify.html">Verify: Backup</a></li>
+      <li><a href="help/a/backup_cloud.html">Cloud: Backup</a></li>
+      <li><a href="help/a/backup_download.html">Download</a></li>
+      <li><a href="help/a/qa_fsback_vs_fspback.html">What Is the Difference Between .fsback</a></li>
+      <li><a href="help/a/qa_backup_full_guide.html">How to Back Up All Scheduled Posts in</a></li>
+      <li><a href="help/a/media_storage.html">Media Storage Overview</a></li>
+      <li><a href="help/a/storage_use_case.html">When to Use Storage</a></li>
+      <li><a href="help/a/ms_boxes.html">Storage Boxes</a></li>
+      <li><a href="help/a/ms_create.html">Create a Box</a></li>
+      <li><a href="help/a/ms_rename.html">Rename Box</a></li>
+      <li><a href="help/a/ms_archive.html">Archive: Media Storage</a></li>
+      <li><a href="help/a/ms_quota.html">Quota: Media Storage</a></li>
+      <li><a href="help/a/ms_preview.html">Preview: Media Storage</a></li>
+      <li><a href="help/a/ms_box_manage.html">Manage Box</a></li>
+      <li><a href="help/a/ms_save.html">Save Media</a></li>
+      <li><a href="help/a/ms_manage.html">Manage Storage</a></li>
+      <li><a href="help/a/ms_limits.html">Storage Limits</a></li>
+      <li><a href="help/a/ms_premium.html">Storage on Premium</a></li>
+      <li><a href="help/a/media_retention.html">Media Compression &amp;amp; Retention</a></li>
+      <li><a href="help/a/storage_lifecycle.html">Lifecycle</a></li>
+      <li><a href="help/a/ms_bulk.html">Bulk Move, Copy &amp;amp; Box Download</a></li>
+      <li><a href="help/a/qa_media_storage_guide.html">What Is Media Storage and How Do You</a></li>
+      <li><a href="help/a/tools.html">Tools Overview</a></li>
+      <li><a href="help/a/message_list.html">Message List</a></li>
+      <li><a href="help/a/search.html">Searching Messages</a></li>
+      <li><a href="help/a/search_messages.html">Search: Tools</a></li>
+      <li><a href="help/a/search_filter.html">Search Scoping &amp;amp; Filters</a></li>
+      <li><a href="help/a/search_delete.html">Deleting Found Messages</a></li>
+      <li><a href="help/a/statistics.html">Statistics Dashboard</a></li>
+      <li><a href="help/a/calendar.html">Calendar View</a></li>
+      <li><a href="help/a/qa_stats_views.html">How Can I See Views, Reactions and</a></li>
+      <li><a href="help/a/tips.html">Pro Tips Overview</a></li>
+      <li><a href="help/a/tips_backup.html">Backup Tips</a></li>
+      <li><a href="help/a/tips_bulk.html">Bulk Tips</a></li>
+      <li><a href="help/a/tips_channels.html">Channel Tips</a></li>
+      <li><a href="help/a/tips_feedback.html">Feedback Tips</a></li>
+      <li><a href="help/a/tips_language.html">Language Tips</a></li>
+      <li><a href="help/a/tips_migration.html">Migration Tips</a></li>
+      <li><a href="help/a/tips_payment.html">Payment Tips</a></li>
+      <li><a href="help/a/tips_premium.html">Premium Tips</a></li>
+      <li><a href="help/a/tips_preview.html">Preview Tips</a></li>
+      <li><a href="help/a/tips_queue.html">Queue Tips</a></li>
+      <li><a href="help/a/tips_recurring.html">Recurring Tips</a></li>
+      <li><a href="help/a/tips_referral.html">Referral Tips</a></li>
+      <li><a href="help/a/tips_search.html">Search Tips</a></li>
+      <li><a href="help/a/tips_security.html">Security Tips</a></li>
+      <li><a href="help/a/tips_signature.html">Signature Tips</a></li>
+      <li><a href="help/a/tips_storage.html">Storage Tips</a></li>
+      <li><a href="help/a/tips_timezone.html">Time Zone Tips</a></li>
+      <li><a href="help/a/tips_troubleshoot.html">Troubleshoot Tips</a></li>
+      <li><a href="help/a/tg_best_posting_times.html">The Best Times to Post in Telegram (and</a></li>
+      <li><a href="help/a/feedback.html">Feedback &amp;amp; Support Overview</a></li>
+      <li><a href="help/a/feedback_new.html">Send Feedback</a></li>
+      <li><a href="help/a/feedback_category_bug_detail.html">Bug Reports</a></li>
+      <li><a href="help/a/feedback_category_feature_detail.html">Feature Requests</a></li>
+      <li><a href="help/a/feedback_category_payment_detail.html">Payment Issues</a></li>
+      <li><a href="help/a/feedback_category_other_detail.html">Other: Feedback &amp;amp; Support</a></li>
+      <li><a href="help/a/feedback_view.html">View My Feedback</a></li>
+      <li><a href="help/a/feedback_history.html">History: Feedback &amp;amp; Support</a></li>
+      <li><a href="help/a/feedback_status_help.html">Status Meanings</a></li>
+      <li><a href="help/a/feedback_reply.html">Replies: Feedback &amp;amp; Support</a></li>
+      <li><a href="help/a/feedback_file.html">Attachments</a></li>
+      <li><a href="help/a/faq_schedule.html">Scheduling FAQ</a></li>
+      <li><a href="help/a/faq_bot.html">Sender Bot FAQ</a></li>
+      <li><a href="help/a/faq_payment.html">Payment FAQ</a></li>
+      <li><a href="help/a/faq_billing.html">Billing FAQ</a></li>
+      <li><a href="help/a/faq_account.html">Account FAQ</a></li>
+      <li><a href="help/a/faq_security.html">Security FAQ</a></li>
+      <li><a href="help/a/faq_storage.html">Storage FAQ</a></li>
+      <li><a href="help/a/faq_migration.html">Migration FAQ</a></li>
+      <li><a href="help/a/faq_tips.html">Tips FAQ</a></li>
+      <li><a href="help/a/faq_troubleshoot.html">Troubleshooting FAQ</a></li>
+      <li><a href="help/a/faq_telegram.html">Telegram FAQ</a></li>
+      <li><a href="help/a/faq_api.html">API FAQ: Frequently Asked Questions</a></li>
+      <li><a href="help/a/faq_best_practices.html">Best Practices</a></li>
+      <li><a href="help/a/qa_move_channel_account.html">How to Move Fast Scheduler to a New</a></li>
+      <li><a href="help/a/qa_duplicate_posts.html">Why Is My Telegram Channel Posting</a></li>
+      <li><a href="help/a/tg_channels_explained.html">Telegram Channels vs Groups vs Bots</a></li>
+      <li><a href="help/a/qa_setdate_bulk.html">How Do I Schedule Many Telegram Posts</a></li>
+      <li><a href="help/a/tg_channel_vs_group.html">Telegram Channel vs Group: What Is the</a></li>
+      <li><a href="help/a/qa_what_is_fast_scheduler.html">What Is Fast Scheduler? The Telegram</a></li>
+      <li><a href="help/a/commands.html">Text Commands Overview</a></li>
+      <li><a href="help/a/commands_list.html">All Commands</a></li>
+      <li><a href="help/a/commands_schedule.html">/schedule</a></li>
+      <li><a href="help/a/commands_search.html">/search: Text Commands</a></li>
+      <li><a href="help/a/commands_premium.html">/premium</a></li>
+      <li><a href="help/a/commands_referral.html">/referral</a></li>
+      <li><a href="help/a/commands_settings.html">Settings</a></li>
+      <li><a href="help/a/commands_language.html">/language</a></li>
+      <li><a href="help/a/errors.html">Troubleshooting Overview</a></li>
+      <li><a href="help/a/error_common.html">Common Errors</a></li>
+      <li><a href="help/a/error_network.html">Network Errors</a></li>
+      <li><a href="help/a/error_timeout.html">Timeouts</a></li>
+      <li><a href="help/a/error_rate.html">Rate Limited</a></li>
+      <li><a href="help/a/error_media.html">Media Errors</a></li>
+      <li><a href="help/a/error_channel.html">Channel Errors</a></li>
+      <li><a href="help/a/error_forbidden.html">Forbidden</a></li>
+      <li><a href="help/a/error_payment.html">Payment Errors</a></li>
+      <li><a href="help/a/troubleshoot_nopost.html">No Post Sent</a></li>
+      <li><a href="help/a/troubleshoot_late.html">Late Post</a></li>
+      <li><a href="help/a/troubleshoot_media.html">Media Fails</a></li>
+      <li><a href="help/a/troubleshoot_perm.html">Permission</a></li>
+      <li><a href="help/a/troubleshoot_bot.html">Bot Down</a></li>
+      <li><a href="help/a/qa_post_not_sent.html">Scheduled Message Didn’t Post? The 6</a></li>
+      <li><a href="help/a/privacy.html">Privacy Overview</a></li>
+      <li><a href="help/a/privacy_data.html">Your Data</a></li>
+      <li><a href="help/a/privacy_consent.html">Consent: Privacy</a></li>
+      <li><a href="help/a/privacy_thirdparty.html">Third Parties</a></li>
+      <li><a href="help/a/privacy_export.html">Export Data: Privacy</a></li>
+      <li><a href="help/a/privacy_delete.html">Delete Account</a></li>
+      <li><a href="help/a/security_token.html">Token Safety</a></li>
+      <li><a href="help/a/security_2fa.html">Account Safety</a></li>
+      <li><a href="help/a/security_data.html">Data Safety</a></li>
+      <li><a href="help/a/qa_delete_data.html">How Do I Delete My Fast Scheduler</a></li>
+      <li><a href="help/a/contact.html">Contact &amp;amp; Support Overview</a></li>
+      <li><a href="help/a/contact_support.html">Support: Contact &amp;amp; Support</a></li>
+      <li><a href="help/a/contact_telegram.html">Telegram Support</a></li>
+      <li><a href="help/a/contact_email.html">Email: Contact &amp;amp; Support</a></li>
+      <li><a href="help/a/contact_bug.html">Report a Bug</a></li>
+      <li><a href="help/a/contact_feature_detail.html">Request a Feature</a></li>
+      <li><a href="help/a/contact_response.html">Response Time</a></li>
+      <li><a href="help/a/config.html">Settings &amp;amp; Configuration Overview</a></li>
+      <li><a href="help/a/signature.html">Signatures (Premium)</a></li>
+      <li><a href="help/a/qa_signature_guide.html">How to Add an Automatic Signature to</a></li>
+      <li><a href="help/a/channel_signature_position.html">Signature Position</a></li>
+      <li><a href="help/a/ms_copy.html">Copying Items Between Boxes</a></li>
+      <li><a href="help/a/ms_delete.html">Delete Media</a></li>
+      <li><a href="help/a/ms_document_storage.html">Stored Documents</a></li>
+      <li><a href="help/a/ms_move.html">Move Media</a></li>
+      <li><a href="help/a/ms_photo.html">Stored Photos</a></li>
+      <li><a href="help/a/ms_replace.html">Replace Media</a></li>
+      <li><a href="help/a/ms_video.html">Stored Videos</a></li>
+      <li><a href="help/a/schedule_timezone.html">Scheduling Time Zone</a></li>
+      </ul>
+    </nav>
+  </noscript>
     <div class="wrap hc-shell">
       <button type="button" class="hc-side-reveal" id="hcSideReveal" aria-label="Show topics" title="Show topics (O)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg><span>Topics</span><kbd class="tab-kbd" aria-hidden="true">O</kbd></button>
       <aside class="hc-side" id="hcSide" aria-label="Help topics">
@@ -12746,6 +13077,7 @@
           </header>
           <div class="hc-filters" id="hcSearchFilters" hidden></div>
           <div class="hc-list" id="hcSearchList" hidden></div>
+    
           <div class="hc-sempty" id="hcSearchEmpty" hidden>
             <span class="hc-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
             <h2>No results found for &ldquo;<span id="hcSearchQ"></span>&rdquo;</h2>
@@ -12791,15 +13123,15 @@
   </div>
 </footer>
 
-<script src="scripts/settings.js?v=20261005d1"></script>
-  <script src="scripts/ru-chrome.js?v=20261010a2"></script><script src="scripts/lang.js?v=20261010a2"></script>
-<script src="scripts/help-search.js?v=20260930a1"></script>
-<script src="scripts/hotkeys-modal.js?v=20261006a1"></script>
-<script src="scripts/hotkeys.js?v=20261005d1"></script>
-<script src="scripts/scroll-jump.js?v=20261005a1"></script>
-<script src="scripts/liquid-nav.js?v=20261005d1"></script>
+<script src="scripts/settings.js?v=20261013m1"></script>
+  <script src="scripts/ru-chrome.js?v=20261013m1"></script><script src="scripts/lang.js?v=20261013m1"></script>
+<script src="scripts/help-search.js?v=20261013m1"></script>
+<script src="scripts/hotkeys-modal.js?v=20261013m1"></script>
+<script src="scripts/hotkeys.js?v=20261013m1"></script>
+<script src="scripts/scroll-jump.js?v=20261013m1"></script>
+<script src="scripts/liquid-nav.js?v=20261013m1"></script>
 <script src="scripts/help-data.js?v=20261005a1"></script>
-<script src="scripts/help-ai.js?v=20260930a1"></script>
-<script src="scripts/help-hub.js?v=20261006b1"></script>
+<script src="scripts/help-ai.js?v=20261013m1"></script>
+<script src="scripts/help-hub.js?v=20261006b4"></script>
 </body>
 </html>
