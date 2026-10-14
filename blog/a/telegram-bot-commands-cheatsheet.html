@@ -50,8 +50,8 @@ document.documentElement.classList.add('blog-fs');
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Fast Scheduler", "item": "https://fastschedulebot.github.io/Fast-Scheduler/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://fastschedulebot.github.io/Fast-Scheduler/blog/"}, {"@type": "ListItem", "position": 3, "name": "The Channel Owner’s Bot Cheatsheet: Commands Worth Memorizing", "item": "https://fastschedulebot.github.io/Fast-Scheduler/blog/a/telegram-bot-commands-cheatsheet.html"}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Do I need to learn bot commands to run a channel?", "acceptedAnswer": {"@type": "Answer", "text": "Only a handful: create/rotate a token at BotFather, the schedule/list/recurring basics in your scheduler, and reply-moderation in your group bots. Everything else is menus."}}, {"@type": "Question", "name": "Which is easier for scheduling: ManyBot, ControllerBot or Fast Scheduler?", "acceptedAnswer": {"@type": "Answer", "text": "ManyBot for simplicity, ControllerBot for reports, Fast Scheduler for batch workflows (many posts in one message). All three cover the core schedule-list-recurring loop."}}, {"@type": "Question", "name": "How do I rotate a bot token safely?", "acceptedAnswer": {"@type": "Answer", "text": "BotFather → /mybots → API Token → Revoke, then update the token wherever the bot is connected (scheduler settings). The old token dies instantly."}}, {"@type": "Question", "name": "What commands should a channel owner set for their own bot?", "acceptedAnswer": {"@type": "Answer", "text": "Minimum: start, help, and whatever your publishing bot needs. /setcommands in BotFather defines the menu users see — five clear entries beat twenty cryptic ones."}}]}</script>
 <link rel="preload" href="../../fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../../fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="../../styles/main.css?v=20261013m3">
-<link rel="stylesheet" href="../../styles/hotkeys-modal.css?v=20261013m1">
+<link rel="stylesheet" href="../../styles/main.css?v=20261014a3">
+<link rel="stylesheet" href="../../styles/hotkeys-modal.css?v=20261014a3">
 <style>
     /* ===== Blog layout (uses main.css tokens + header/footer as-is) ===== */
     body.blog { --maxw: 1280px; }
@@ -456,7 +456,7 @@ document.documentElement.classList.add('blog-fs');
     .blog-doc, .hc-pager, footer.site, .blog-toc, .blog-reel, .blog-toc-fab, .hc-cta, .blog-moreq {
       transition: opacity .3s cubic-bezier(.22,.61,.36,1), display .3s allow-discrete, visibility 0s; }
     html.blog-fs header.site { transform: translateY(-100%); margin-bottom: calc(-1 * var(--nav-h, 64px)); }
-    html.blog-fs footer.site, html.blog-fs .hc-cta, html.blog-fs .hc-pager, html.blog-fs .blog-toc,
+    html.blog-fs footer.site, html.blog-fs .hc-cta, html.blog-fs .blog-toc,
     html.blog-fs .blog-reel, html.blog-fs .blog-toc-fab, html.blog-fs .blog-moreq, html.blog-fs .hc-related {
       display: none; opacity: 0; visibility: hidden;
       transition: opacity .3s cubic-bezier(.22,.61,.36,1), display 0s .35s allow-discrete, visibility 0s .35s; }
@@ -464,7 +464,7 @@ document.documentElement.classList.add('blog-fs');
     html.blog-fs .blog-doc { max-width: 960px; margin: 0 auto; width: 100%; }
     html.blog-fs .blog-doc-cover { margin-top: 0; }
     @media (prefers-reduced-motion: reduce) {
-      html.blog-fs footer.site, html.blog-fs .hc-cta, html.blog-fs .hc-pager, html.blog-fs .blog-toc,
+      html.blog-fs footer.site, html.blog-fs .hc-cta, html.blog-fs .blog-toc,
       html.blog-fs .blog-reel, html.blog-fs .blog-toc-fab, html.blog-fs .blog-moreq, html.blog-fs .hc-related,
       .blog-doc, .hc-pager, footer.site, .blog-toc, .blog-reel, .blog-toc-fab, .hc-cta, .blog-moreq { transition: none !important; }
     }
@@ -523,15 +523,13 @@ document.documentElement.classList.add('blog-fs');
 <div class="blog-cols">
   <div>
     <nav class="hc-crumbs" aria-label="Breadcrumb"><a href="../index.html">Blog</a><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg><span aria-current="page">The Channel Owner’s Bot Cheatsheet: Commands Worth Memorizing</span></nav>
-    <button type="button" class="blog-toc-fab" data-blog-toc-fab aria-label="Open contents" hidden><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg><span>Contents</span></button>
+    <button type="button" class="blog-toc-fab" data-blog-toc-fab aria-label="Open contents"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg><span>Contents</span></button>
 <div class="blog-toc-scrim" data-blog-toc-scrim hidden></div>
 <div class="blog-toc-sheet" data-blog-toc-sheet role="dialog" aria-modal="true" aria-label="Contents" hidden>
-  <div class="blog-toc-head"><span>Contents</span><span class="blog-toc-mini"><button type="button" data-blog-wide aria-checked="false" title="Wide format">Wide</button><button type="button" data-blog-rail aria-checked="true" title="Article navigation">Nav</button><button type="button" data-blog-fs aria-checked="false" title="Fullscreen">Full</button></span><button type="button" class="icon-btn" data-blog-toc-close aria-label="Close contents"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+  <div class="blog-toc-head"><span>Contents</span><button type="button" class="icon-btn" data-blog-toc-close aria-label="Close contents"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
   <div class="blog-toc-nav">
-    <a class="blog-toc-navc prev" href="telegram-channel-migration.html"><small>Previous</small><b>How to Move a Telegram Channel: Merging, Renaming and Migrating Audiences</b><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg></a>
     <div class="blog-toc-navc cur"><small>Now reading</small><b>The Channel Owner’s Bot Cheatsheet: Commands Worth Memorizing</b></div>
-    <a class="blog-toc-navc next" href="telegram-advertising-guide.html"><small>Up next</small><b>Advertising in Telegram: How Paid Promos Actually Work in 2026</b><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-  </div>
+    </div>
   <ol class="blog-toc-list"><a href="#s-botfather-bot-management">@BotFather (bot management)</a><a href="#s-scheduling-bots-the-daily-drivers">Scheduling bots (the daily drivers)</a><a href="#s-moderation-group-side">Moderation (group side)</a><a href="#s-analytics">Analytics</a><a href="#s-the-meta-skill">The meta-skill</a><a href="#s-building-your-own-cheatsheet-the-method">Building your own cheatsheet: the method</a><a href="#s-designing-your-own-command-set-for-bots-you-build">Designing your own command set (for bots you build)</a></ol>
 </div>
     <article class="blog-doc">
@@ -566,13 +564,13 @@ document.documentElement.classList.add('blog-fs');
     </nav>
   </div>
 </footer>
-<script src="../../scripts/theme.js?v=20261013m1"></script>
-<script src="../../scripts/settings.js?v=20261013m1"></script>
-  <script src="../../scripts/ru-content.js?v=20261004b2"></script><script src="../../scripts/ru-chrome.js?v=20261013m1"></script><script src="../../scripts/lang.js?v=20261013m1"></script>
-<script src="../../scripts/help-search.js?v=20261013m1"></script>
-<script src="../../scripts/hotkeys-modal.js?v=20261013m1"></script>
-<script src="../../scripts/hotkeys.js?v=20261013m1"></script>
-<script src="../../scripts/scroll-jump.js?v=20261013m1"></script>
+<script src="../../scripts/theme.js?v=20261014a3"></script>
+<script src="../../scripts/settings.js?v=20261014a3"></script>
+  <script src="../../scripts/ru-content.js?v=20261014a3"></script><script src="../../scripts/ru-chrome.js?v=20261014a3"></script><script src="../../scripts/lang.js?v=20261014a3"></script>
+<script src="../../scripts/help-search.js?v=20261014a3"></script>
+<script src="../../scripts/hotkeys-modal.js?v=20261014a3"></script>
+<script src="../../scripts/hotkeys.js?v=20261014a3"></script>
+<script src="../../scripts/scroll-jump.js?v=20261014a3"></script>
 <script>
 /* Mobile Contents sheet: pill opens/closes, scrim + Esc + link tap close. */
 (function () {

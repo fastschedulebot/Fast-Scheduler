@@ -50,8 +50,8 @@ document.documentElement.classList.add('blog-fs');
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Fast Scheduler", "item": "https://fastschedulebot.github.io/Fast-Scheduler/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://fastschedulebot.github.io/Fast-Scheduler/blog/"}, {"@type": "ListItem", "position": 3, "name": "Telegram Premium for Free: Every Legitimate Way in 2026", "item": "https://fastschedulebot.github.io/Fast-Scheduler/blog/a/how-to-get-telegram-premium-free.html"}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is there any way to get Telegram Premium for free legitimately?", "acceptedAnswer": {"@type": "Answer", "text": "Yes: official giveaways run by Telegram and by large channels, in-app trial offers, gifts from other users, and buying via Fragment with TON at a discount. Anything asking you to log in on a third-party site is a phishing scam."}}, {"@type": "Question", "name": "Do those free Premium bots work?", "acceptedAnswer": {"@type": "Answer", "text": "No. Bots and sites claiming to generate or grant free Premium are ad farms or credential-harvesting operations. Premium is issued exclusively through Telegram's own payment systems and official giveaways."}}, {"@type": "Question", "name": "I received Premium as a gift from a stranger — what now?", "acceptedAnswer": {"@type": "Answer", "text": "Enjoy it, but treat any follow-up message as a scam. The common pattern is an unexpected gift followed by a request (send it back, join a channel, forward something). Gifts cannot be revoked; simply don't engage with the follow-up."}}]}</script>
 <link rel="preload" href="../../fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../../fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="../../styles/main.css?v=20261013m3">
-<link rel="stylesheet" href="../../styles/hotkeys-modal.css?v=20261013m1">
+<link rel="stylesheet" href="../../styles/main.css?v=20261014a3">
+<link rel="stylesheet" href="../../styles/hotkeys-modal.css?v=20261014a3">
 <style>
     /* ===== Blog layout (uses main.css tokens + header/footer as-is) ===== */
     body.blog { --maxw: 1280px; }
@@ -456,7 +456,7 @@ document.documentElement.classList.add('blog-fs');
     .blog-doc, .hc-pager, footer.site, .blog-toc, .blog-reel, .blog-toc-fab, .hc-cta, .blog-moreq {
       transition: opacity .3s cubic-bezier(.22,.61,.36,1), display .3s allow-discrete, visibility 0s; }
     html.blog-fs header.site { transform: translateY(-100%); margin-bottom: calc(-1 * var(--nav-h, 64px)); }
-    html.blog-fs footer.site, html.blog-fs .hc-cta, html.blog-fs .hc-pager, html.blog-fs .blog-toc,
+    html.blog-fs footer.site, html.blog-fs .hc-cta, html.blog-fs .blog-toc,
     html.blog-fs .blog-reel, html.blog-fs .blog-toc-fab, html.blog-fs .blog-moreq, html.blog-fs .hc-related {
       display: none; opacity: 0; visibility: hidden;
       transition: opacity .3s cubic-bezier(.22,.61,.36,1), display 0s .35s allow-discrete, visibility 0s .35s; }
@@ -464,7 +464,7 @@ document.documentElement.classList.add('blog-fs');
     html.blog-fs .blog-doc { max-width: 960px; margin: 0 auto; width: 100%; }
     html.blog-fs .blog-doc-cover { margin-top: 0; }
     @media (prefers-reduced-motion: reduce) {
-      html.blog-fs footer.site, html.blog-fs .hc-cta, html.blog-fs .hc-pager, html.blog-fs .blog-toc,
+      html.blog-fs footer.site, html.blog-fs .hc-cta, html.blog-fs .blog-toc,
       html.blog-fs .blog-reel, html.blog-fs .blog-toc-fab, html.blog-fs .blog-moreq, html.blog-fs .hc-related,
       .blog-doc, .hc-pager, footer.site, .blog-toc, .blog-reel, .blog-toc-fab, .hc-cta, .blog-moreq { transition: none !important; }
     }
@@ -523,15 +523,13 @@ document.documentElement.classList.add('blog-fs');
 <div class="blog-cols">
   <div>
     <nav class="hc-crumbs" aria-label="Breadcrumb"><a href="../index.html">Blog</a><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg><span aria-current="page">Telegram Premium for Free: Every Legitimate Way in 2026</span></nav>
-    <button type="button" class="blog-toc-fab" data-blog-toc-fab aria-label="Open contents" hidden><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg><span>Contents</span></button>
+    <button type="button" class="blog-toc-fab" data-blog-toc-fab aria-label="Open contents"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg><span>Contents</span></button>
 <div class="blog-toc-scrim" data-blog-toc-scrim hidden></div>
 <div class="blog-toc-sheet" data-blog-toc-sheet role="dialog" aria-modal="true" aria-label="Contents" hidden>
-  <div class="blog-toc-head"><span>Contents</span><span class="blog-toc-mini"><button type="button" data-blog-wide aria-checked="false" title="Wide format">Wide</button><button type="button" data-blog-rail aria-checked="true" title="Article navigation">Nav</button><button type="button" data-blog-fs aria-checked="false" title="Fullscreen">Full</button></span><button type="button" class="icon-btn" data-blog-toc-close aria-label="Close contents"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+  <div class="blog-toc-head"><span>Contents</span><button type="button" class="icon-btn" data-blog-toc-close aria-label="Close contents"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
   <div class="blog-toc-nav">
-    <a class="blog-toc-navc prev" href="telegram-auto-forward-and-crosspost.html"><small>Previous</small><b>Telegram Auto-Forward and Cross-Posting: Every Working Method</b><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg></a>
     <div class="blog-toc-navc cur"><small>Now reading</small><b>Telegram Premium for Free: Every Legitimate Way in 2026</b></div>
-    <a class="blog-toc-navc next" href="telegram-dark-mode-and-ui-tips.html"><small>Up next</small><b>Telegram Dark Mode and UI Customization: The Full Guide</b><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-  </div>
+    </div>
   <ol class="blog-toc-list"><a href="#s-the-legitimate-ways">The legitimate ways</a><a href="#s-how-the-scams-work-so-they-stop-working">How the scams work (so they stop working)</a><a href="#s-why-it-matters-for-channel-owners">Why it matters for channel owners</a></ol>
 </div>
     <article class="blog-doc">
@@ -566,13 +564,13 @@ document.documentElement.classList.add('blog-fs');
     </nav>
   </div>
 </footer>
-<script src="../../scripts/theme.js?v=20261013m1"></script>
-<script src="../../scripts/settings.js?v=20261013m1"></script>
-  <script src="../../scripts/ru-content.js?v=20261004b2"></script><script src="../../scripts/ru-chrome.js?v=20261013m1"></script><script src="../../scripts/lang.js?v=20261013m1"></script>
-<script src="../../scripts/help-search.js?v=20261013m1"></script>
-<script src="../../scripts/hotkeys-modal.js?v=20261013m1"></script>
-<script src="../../scripts/hotkeys.js?v=20261013m1"></script>
-<script src="../../scripts/scroll-jump.js?v=20261013m1"></script>
+<script src="../../scripts/theme.js?v=20261014a3"></script>
+<script src="../../scripts/settings.js?v=20261014a3"></script>
+  <script src="../../scripts/ru-content.js?v=20261014a3"></script><script src="../../scripts/ru-chrome.js?v=20261014a3"></script><script src="../../scripts/lang.js?v=20261014a3"></script>
+<script src="../../scripts/help-search.js?v=20261014a3"></script>
+<script src="../../scripts/hotkeys-modal.js?v=20261014a3"></script>
+<script src="../../scripts/hotkeys.js?v=20261014a3"></script>
+<script src="../../scripts/scroll-jump.js?v=20261014a3"></script>
 <script>
 /* Mobile Contents sheet: pill opens/closes, scrim + Esc + link tap close. */
 (function () {

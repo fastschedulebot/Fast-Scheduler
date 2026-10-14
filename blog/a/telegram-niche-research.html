@@ -50,8 +50,8 @@ document.documentElement.classList.add('blog-fs');
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Fast Scheduler", "item": "https://fastschedulebot.github.io/Fast-Scheduler/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://fastschedulebot.github.io/Fast-Scheduler/blog/"}, {"@type": "ListItem", "position": 3, "name": "How to Research a Telegram Niche Before You Start a Channel", "item": "https://fastschedulebot.github.io/Fast-Scheduler/blog/a/telegram-niche-research.html"}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How do I find Telegram channels in a niche?", "acceptedAnswer": {"@type": "Answer", "text": "TGStat and Telemetr catalogs are the standard — both are searchable, filterable channel directories with engagement data. Telegram’s in-app search and Google (“site:t.me” searches) fill the gaps."}}, {"@type": "Question", "name": "What engagement rate is good for a Telegram channel?", "acceptedAnswer": {"@type": "Answer", "text": "20–40% view-to-subscriber is healthy; ERR above 30% marks a strong channel in most niches. Compare within your niche — rates vary by topic and region."}}, {"@type": "Question", "name": "Is a small niche worth a channel?", "acceptedAnswer": {"@type": "Answer", "text": "Often yes: small niches monetize through products and premium communities rather than ad volume, and competition for attention is thin. Check whether the top channels earn somehow — if they do, you can too."}}, {"@type": "Question", "name": "How many channels are too many in one niche?", "acceptedAnswer": {"@type": "Answer", "text": "Matters less than the quality gap. Ten mediocre channels with one obvious gap (consistency, formatting, comments) is a better market than two strong ones with no gap."}}]}</script>
 <link rel="preload" href="../../fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../../fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="../../styles/main.css?v=20261013m3">
-<link rel="stylesheet" href="../../styles/hotkeys-modal.css?v=20261013m1">
+<link rel="stylesheet" href="../../styles/main.css?v=20261014a3">
+<link rel="stylesheet" href="../../styles/hotkeys-modal.css?v=20261014a3">
 <style>
     /* ===== Blog layout (uses main.css tokens + header/footer as-is) ===== */
     body.blog { --maxw: 1280px; }
@@ -456,7 +456,7 @@ document.documentElement.classList.add('blog-fs');
     .blog-doc, .hc-pager, footer.site, .blog-toc, .blog-reel, .blog-toc-fab, .hc-cta, .blog-moreq {
       transition: opacity .3s cubic-bezier(.22,.61,.36,1), display .3s allow-discrete, visibility 0s; }
     html.blog-fs header.site { transform: translateY(-100%); margin-bottom: calc(-1 * var(--nav-h, 64px)); }
-    html.blog-fs footer.site, html.blog-fs .hc-cta, html.blog-fs .hc-pager, html.blog-fs .blog-toc,
+    html.blog-fs footer.site, html.blog-fs .hc-cta, html.blog-fs .blog-toc,
     html.blog-fs .blog-reel, html.blog-fs .blog-toc-fab, html.blog-fs .blog-moreq, html.blog-fs .hc-related {
       display: none; opacity: 0; visibility: hidden;
       transition: opacity .3s cubic-bezier(.22,.61,.36,1), display 0s .35s allow-discrete, visibility 0s .35s; }
@@ -464,7 +464,7 @@ document.documentElement.classList.add('blog-fs');
     html.blog-fs .blog-doc { max-width: 960px; margin: 0 auto; width: 100%; }
     html.blog-fs .blog-doc-cover { margin-top: 0; }
     @media (prefers-reduced-motion: reduce) {
-      html.blog-fs footer.site, html.blog-fs .hc-cta, html.blog-fs .hc-pager, html.blog-fs .blog-toc,
+      html.blog-fs footer.site, html.blog-fs .hc-cta, html.blog-fs .blog-toc,
       html.blog-fs .blog-reel, html.blog-fs .blog-toc-fab, html.blog-fs .blog-moreq, html.blog-fs .hc-related,
       .blog-doc, .hc-pager, footer.site, .blog-toc, .blog-reel, .blog-toc-fab, .hc-cta, .blog-moreq { transition: none !important; }
     }
@@ -523,15 +523,13 @@ document.documentElement.classList.add('blog-fs');
 <div class="blog-cols">
   <div>
     <nav class="hc-crumbs" aria-label="Breadcrumb"><a href="../index.html">Blog</a><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg><span aria-current="page">How to Research a Telegram Niche Before You Start a Channel</span></nav>
-    <button type="button" class="blog-toc-fab" data-blog-toc-fab aria-label="Open contents" hidden><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg><span>Contents</span></button>
+    <button type="button" class="blog-toc-fab" data-blog-toc-fab aria-label="Open contents"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg><span>Contents</span></button>
 <div class="blog-toc-scrim" data-blog-toc-scrim hidden></div>
 <div class="blog-toc-sheet" data-blog-toc-sheet role="dialog" aria-modal="true" aria-label="Contents" hidden>
-  <div class="blog-toc-head"><span>Contents</span><span class="blog-toc-mini"><button type="button" data-blog-wide aria-checked="false" title="Wide format">Wide</button><button type="button" data-blog-rail aria-checked="true" title="Article navigation">Nav</button><button type="button" data-blog-fs aria-checked="false" title="Fullscreen">Full</button></span><button type="button" class="icon-btn" data-blog-toc-close aria-label="Close contents"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+  <div class="blog-toc-head"><span>Contents</span><button type="button" class="icon-btn" data-blog-toc-close aria-label="Close contents"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
   <div class="blog-toc-nav">
-    <a class="blog-toc-navc prev" href="telegram-channel-mistakes.html"><small>Previous</small><b>15 Telegram Channel Mistakes That Quietly Kill Growth</b><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg></a>
     <div class="blog-toc-navc cur"><small>Now reading</small><b>How to Research a Telegram Niche Before You Start a Channel</b></div>
-    <a class="blog-toc-navc next" href="telegram-privacy-for-channel-owners.html"><small>Up next</small><b>Telegram Privacy Settings Every Channel Owner Should Know</b><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-  </div>
+    </div>
   <ol class="blog-toc-list"><a href="#s-step-1-map-the-niche-on-tgstat-telemetr">Step 1: map the niche on TGStat / Telemetr</a><a href="#s-step-2-the-math-that-matters">Step 2: the math that matters</a><a href="#s-step-3-find-the-gap">Step 3: find the gap</a><a href="#s-step-4-the-sustainability-test">Step 4: the sustainability test</a><a href="#s-step-5-set-up-the-rhythm-before-announcing">Step 5: set up the rhythm before announcing</a><a href="#s-the-engagement-rate-math-with-real-thresholds">The engagement-rate math, with real thresholds</a><a href="#s-validation-before-commitment-the-10-question-checklist">Validation before commitment: the 10-question checklist</a></ol>
 </div>
     <article class="blog-doc">
@@ -566,13 +564,13 @@ document.documentElement.classList.add('blog-fs');
     </nav>
   </div>
 </footer>
-<script src="../../scripts/theme.js?v=20261013m1"></script>
-<script src="../../scripts/settings.js?v=20261013m1"></script>
-  <script src="../../scripts/ru-content.js?v=20261004b2"></script><script src="../../scripts/ru-chrome.js?v=20261013m1"></script><script src="../../scripts/lang.js?v=20261013m1"></script>
-<script src="../../scripts/help-search.js?v=20261013m1"></script>
-<script src="../../scripts/hotkeys-modal.js?v=20261013m1"></script>
-<script src="../../scripts/hotkeys.js?v=20261013m1"></script>
-<script src="../../scripts/scroll-jump.js?v=20261013m1"></script>
+<script src="../../scripts/theme.js?v=20261014a3"></script>
+<script src="../../scripts/settings.js?v=20261014a3"></script>
+  <script src="../../scripts/ru-content.js?v=20261014a3"></script><script src="../../scripts/ru-chrome.js?v=20261014a3"></script><script src="../../scripts/lang.js?v=20261014a3"></script>
+<script src="../../scripts/help-search.js?v=20261014a3"></script>
+<script src="../../scripts/hotkeys-modal.js?v=20261014a3"></script>
+<script src="../../scripts/hotkeys.js?v=20261014a3"></script>
+<script src="../../scripts/scroll-jump.js?v=20261014a3"></script>
 <script>
 /* Mobile Contents sheet: pill opens/closes, scrim + Esc + link tap close. */
 (function () {
